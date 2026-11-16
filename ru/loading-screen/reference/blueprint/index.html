@@ -1,0 +1,1376 @@
+<!DOCTYPE html><html lang="ru" dir="ltr" data-theme="dark" data-has-toc data-has-sidebar data-astro-cid-g5ptsecz><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>API Blueprint | SGC Docs</title><link rel="canonical" href="https://sgc-docs.github.io/ru/loading-screen/reference/blueprint/"/><link rel="alternate" hreflang="en" href="https://sgc-docs.github.io/loading-screen/reference/blueprint/"/><link rel="alternate" hreflang="ru" href="https://sgc-docs.github.io/ru/loading-screen/reference/blueprint/"/><link rel="alternate" hreflang="x-default" href="https://sgc-docs.github.io/loading-screen/reference/blueprint/"/><link rel="sitemap" href="/sitemap-index.xml"/><link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml"/><meta name="generator" content="Astro v7.4.12"/><meta name="generator" content="Starlight v0.43.1"/><meta property="og:title" content="API Blueprint"/><meta property="og:type" content="article"/><meta property="og:url" content="https://sgc-docs.github.io/ru/loading-screen/reference/blueprint/"/><meta property="og:locale" content="ru"/><meta property="og:description" content="Справочник SGC Loading Screen. API Blueprint."/><meta property="og:site_name" content="SGC Docs"/><meta name="twitter:card" content="summary_large_image"/><meta name="description" content="Справочник SGC Loading Screen. API Blueprint."/><script>
+	(() => {
+		const storedTheme =
+			typeof localStorage !== 'undefined' && localStorage.getItem('starlight-theme');
+		const theme =
+			storedTheme ||
+			(window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+		document.documentElement.dataset.theme = theme === 'light' ? 'light' : 'dark';
+	})();
+</script><link rel="stylesheet" href="/_astro/print.C9eyqPGL.css" media="print"><link rel="stylesheet" href="/_astro/common.B2xgT-bM.css"><style>@layer starlight.components.icon{svg[data-astro-cid-hkc32dio]{color:var(--sl-icon-color);font-size:var(--sl-icon-size,1em);width:1em;height:1em;overflow:visible}}
+</style><script type="module" src="/_astro/page.cNngjUgL.js"></script></head><body data-astro-cid-g5ptsecz><a class="sl-skip-link" href="#_top" data-astro-cid-qb7clj6f>Перейти к содержимому</a><div class="page sl-flex" data-astro-cid-yntsjkba><header class="header" data-astro-cid-yntsjkba><div class="header" data-astro-cid-by6fddyj><div class="title-wrapper sl-flex" data-astro-cid-by6fddyj><a href="/ru" class="site-title sl-flex" data-astro-cid-6rvad3va><span translate="no" data-astro-cid-6rvad3va>SGC Docs</span></a></div><div class="sl-flex print:hidden" data-astro-cid-by6fddyj><site-search data-translations="{&quot;placeholder&quot;:&quot;Поиск&quot;}" data-astro-cid-b5kgnn7o="true"><button data-open-modal disabled aria-label="Поиск" aria-keyshortcuts="Control+K" data-astro-cid-b5kgnn7o><svg data-astro-cid-b5kgnn7o="true" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;" data-astro-cid-hkc32dio><path d="M21.71 20.29 18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14Z"/></svg><span class="sl-hidden md:sl-block" aria-hidden="true" data-astro-cid-b5kgnn7o>Поиск</span><kbd class="sl-hidden md:sl-flex" style="display: none" data-astro-cid-b5kgnn7o><kbd data-astro-cid-b5kgnn7o>Ctrl</kbd><kbd data-astro-cid-b5kgnn7o>K</kbd></kbd></button><dialog style="padding: 0" aria-label="Поиск" data-astro-cid-b5kgnn7o><div class="dialog-frame sl-flex" data-astro-cid-b5kgnn7o><button data-close-modal class="sl-flex md:sl-hidden" data-astro-cid-b5kgnn7o>Отменить</button><div class="search-container" data-astro-cid-b5kgnn7o><div id="starlight__search" data-astro-cid-b5kgnn7o></div></div></div></dialog></site-search><script>
+	(() => {
+		const openBtn = document.querySelector('button[data-open-modal]');
+		const shortcut = openBtn?.querySelector('kbd');
+		if (!openBtn || !(shortcut instanceof HTMLElement)) return;
+		const platformKey = shortcut.querySelector('kbd');
+		if (platformKey && /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
+			platformKey.textContent = '⌘';
+			openBtn.setAttribute('aria-keyshortcuts', 'Meta+K');
+		}
+		shortcut.style.display = '';
+	})();
+</script><script type="module" src="/_astro/Search.astro_astro_type_script_index_0_lang.CibB10mu.js"></script></div><div class="sl-hidden md:sl-flex print:hidden right-group" data-astro-cid-by6fddyj><div class="sl-flex social-icons" data-astro-cid-by6fddyj></div><starlight-theme-select data-astro-cid-smhvfpqh="true"><label style="--sl-select-width: 6.25em" data-astro-cid-2z5xp7gb><span class="sr-only" data-astro-cid-2z5xp7gb>Выберите тему</span><span class="icon label-icon" data-astro-cid-2z5xp7gb><svg class="sl-theme-icon-dark" data-astro-cid-smhvfpqh="true" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;" data-astro-cid-hkc32dio><path d="M21.64 13a1 1 0 0 0-1.05-.14 8.049 8.049 0 0 1-3.37.73 8.15 8.15 0 0 1-8.14-8.1 8.59 8.59 0 0 1 .25-2A1 1 0 0 0 8 2.36a10.14 10.14 0 1 0 14 11.69 1 1 0 0 0-.36-1.05Zm-9.5 6.69A8.14 8.14 0 0 1 7.08 5.22v.27a10.15 10.15 0 0 0 10.14 10.14 9.784 9.784 0 0 0 2.1-.22 8.11 8.11 0 0 1-7.18 4.32v-.04Z"/></svg><svg class="sl-theme-icon-light" data-astro-cid-smhvfpqh="true" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;" data-astro-cid-hkc32dio><path d="M5 12a1 1 0 0 0-1-1H3a1 1 0 0 0 0 2h1a1 1 0 0 0 1-1Zm.64 5-.71.71a1 1 0 0 0 0 1.41 1 1 0 0 0 1.41 0l.71-.71A1 1 0 0 0 5.64 17ZM12 5a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v1a1 1 0 0 0 1 1Zm5.66 2.34a1 1 0 0 0 .7-.29l.71-.71a1 1 0 1 0-1.41-1.41l-.66.71a1 1 0 0 0 0 1.41 1 1 0 0 0 .66.29Zm-12-.29a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.71-.71a1.004 1.004 0 1 0-1.43 1.41l.73.71ZM21 11h-1a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm-2.64 6A1 1 0 0 0 17 18.36l.71.71a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.76-.66ZM12 6.5a5.5 5.5 0 1 0 5.5 5.5A5.51 5.51 0 0 0 12 6.5Zm0 9a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Zm0 3.5a1 1 0 0 0-1 1v1a1 1 0 0 0 2 0v-1a1 1 0 0 0-1-1Z"/></svg><svg class="sl-theme-icon-auto" data-astro-cid-smhvfpqh="true" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;" data-astro-cid-hkc32dio><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg></span><select autocomplete="off" data-astro-cid-2z5xp7gb><option value="dark" data-astro-cid-2z5xp7gb>Тёмная</option><option value="light" data-astro-cid-2z5xp7gb>Светлая</option><option value="auto" selected data-astro-cid-2z5xp7gb>Авто</option></select><svg class="icon caret" data-astro-cid-2z5xp7gb="true" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;" data-astro-cid-hkc32dio><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg></label></starlight-theme-select><script>(() => {
+		const theme = (typeof localStorage !== 'undefined' && localStorage.getItem('starlight-theme'));
+		if (theme) document.querySelectorAll('starlight-theme-select select').forEach((s) => { s.value = theme; });
+	})();</script><script type="module">var e=`starlight-theme`,t=e=>e===`auto`||e===`dark`||e===`light`?e:`auto`,n=()=>t(typeof localStorage<`u`&&localStorage.getItem(e));function r(t){typeof localStorage<`u`&&localStorage.setItem(e,t===`light`||t===`dark`?t:``)}var i=()=>matchMedia(`(prefers-color-scheme: light)`).matches?`light`:`dark`;function a(e){document.querySelectorAll(`starlight-theme-select select`).forEach(t=>{t.value=e}),document.documentElement.dataset.theme=e===`auto`?i():e,r(e)}matchMedia(`(prefers-color-scheme: light)`).addEventListener(`change`,()=>{n()===`auto`&&a(`auto`)});var o=class extends HTMLElement{constructor(){super(),a(n()),this.querySelector(`select`)?.addEventListener(`change`,e=>{e.currentTarget instanceof HTMLSelectElement&&a(t(e.currentTarget.value))})}};customElements.define(`starlight-theme-select`,o);</script><starlight-lang-select><label style="--sl-select-width: 7em" data-astro-cid-2z5xp7gb><span class="sr-only" data-astro-cid-2z5xp7gb>Выберите язык</span><span class="icon label-icon" data-astro-cid-2z5xp7gb><svg data-astro-cid-2z5xp7gb="true" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;" data-astro-cid-hkc32dio><path fill-rule="evenodd" d="M8.516 3a.94.94 0 0 0-.941.94v1.15H2.94a.94.94 0 1 0 0 1.882h7.362a7.422 7.422 0 0 1-1.787 3.958 7.42 7.42 0 0 1-1.422-2.425.94.94 0 1 0-1.774.627 9.303 9.303 0 0 0 1.785 3.043 7.422 7.422 0 0 1-4.164 1.278.94.94 0 1 0 0 1.881 9.303 9.303 0 0 0 5.575-1.855 9.303 9.303 0 0 0 4.11 1.74l-.763 1.525a.968.968 0 0 0-.016.034l-1.385 2.77a.94.94 0 1 0 1.683.841l1.133-2.267h5.806l1.134 2.267a.94.94 0 0 0 1.683-.841l-1.385-2.769a.95.95 0 0 0-.018-.036l-3.476-6.951a.94.94 0 0 0-1.682 0l-1.82 3.639a7.423 7.423 0 0 1-3.593-1.256 9.303 9.303 0 0 0 2.27-5.203h1.894a.94.94 0 0 0 0-1.881H9.456V3.94A.94.94 0 0 0 8.516 3Zm6.426 11.794a1.068 1.068 0 0 1-.02.039l-.703 1.407h3.924l-1.962-3.924-1.24 2.478Z" clip-rule="evenodd"/></svg></span><select autocomplete="off" data-astro-cid-2z5xp7gb><option value="/loading-screen/reference/blueprint/" data-astro-cid-2z5xp7gb>English</option><option value="/ru/loading-screen/reference/blueprint/" selected data-astro-cid-2z5xp7gb>Русский</option></select><svg class="icon caret" data-astro-cid-2z5xp7gb="true" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;" data-astro-cid-hkc32dio><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg></label></starlight-lang-select><script type="module">var e=class extends HTMLElement{constructor(){super();let e=this.querySelector(`select`);e&&(e.addEventListener(`change`,e=>{e.currentTarget instanceof HTMLSelectElement&&(window.location.pathname=e.currentTarget.value)}),window.addEventListener(`pageshow`,t=>{if(!t.persisted)return;let n=e.querySelector(`option[selected]`)?.index;n!==e.selectedIndex&&(e.selectedIndex=n??0)}))}};customElements.define(`starlight-lang-select`,e);</script></div></div></header><nav class="sidebar print:hidden" aria-label="Основное" data-astro-cid-yntsjkba><button popovertarget="starlight__sidebar" class="sl-menu-button sl-flex md:sl-hidden print:hidden" data-astro-cid-r2osgdlg><svg class="open-menu" data-astro-cid-r2osgdlg="true" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;" data-astro-cid-hkc32dio><path d="M3 8h18a1 1 0 1 0 0-2H3a1 1 0 0 0 0 2Zm18 8H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Zm0-5H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Z"/></svg><svg class="close-menu" data-astro-cid-r2osgdlg="true" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;" data-astro-cid-hkc32dio><path d="m13.41 12 6.3-6.29a1.004 1.004 0 1 0-1.42-1.42L12 10.59l-6.29-6.3a1.004 1.004 0 0 0-1.42 1.42l6.3 6.29-6.3 6.29a1 1 0 0 0 0 1.42.998.998 0 0 0 1.42 0l6.29-6.3 6.29 6.3a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.42L13.41 12Z"/></svg><span class="sr-only" data-astro-cid-r2osgdlg>Меню</span></button><script type="module">var e=class extends HTMLElement{constructor(){super();let e=matchMedia(`(min-width: 50em)`),t=()=>{this.popover=e.matches?null:`auto`};t(),e.addEventListener(`change`,()=>t()),this.addEventListener(`toggle`,({newState:e})=>this.trapFocus(e===`open`))}trapFocus(e){document.querySelectorAll(`.main-frame, .sl-skip-link`).forEach(t=>{t.toggleAttribute(`inert`,e)})}};customElements.define(`sl-sidebar-pane`,e);</script><sl-sidebar-pane popover id="starlight__sidebar" class="sidebar-pane" data-astro-cid-yntsjkba="true"><div class="sidebar-content sl-flex" data-astro-cid-yntsjkba><sl-sidebar-state-persist data-hash="0jtxu59" data-astro-cid-ipdry5cl="true"><script aria-hidden="true">
+		(() => {
+			try {
+				if (!matchMedia('(min-width: 50em)').matches) return;
+				/** @type {HTMLElement | null} */
+				const target = document.querySelector('sl-sidebar-state-persist');
+				const state = JSON.parse(sessionStorage.getItem('sl-sidebar-state') || '0');
+				if (!target || !state || target.dataset.hash !== state.hash) return;
+				window._starlightScrollRestore = state.scroll;
+				customElements.define(
+					'sl-sidebar-restore',
+					class SidebarRestore extends HTMLElement {
+						connectedCallback() {
+							try {
+								const idx = parseInt(this.dataset.index || '');
+								const details = this.closest('details');
+								if (details && typeof state.open[idx] === 'boolean') details.open = state.open[idx];
+							} catch {}
+						}
+					}
+				);
+			} catch {}
+		})();
+	</script><ul class="top-level" data-astro-cid-rmhv4bp6><li data-astro-cid-rmhv4bp6><details open data-astro-cid-rmhv4bp6><summary data-astro-cid-rmhv4bp6><span class="group-label" data-astro-cid-rmhv4bp6><span class="large" data-astro-cid-rmhv4bp6>SGC Loading Screen</span></span><svg class="caret" data-astro-cid-rmhv4bp6="true" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;" data-astro-cid-hkc32dio><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="0"></sl-sidebar-restore><ul data-astro-cid-rmhv4bp6><li data-astro-cid-rmhv4bp6><a href="/ru/loading-screen/" data-astro-cid-rmhv4bp6><span data-astro-cid-rmhv4bp6>Обзор</span></a></li><li data-astro-cid-rmhv4bp6><a href="/ru/loading-screen/quick-start/" data-astro-cid-rmhv4bp6><span data-astro-cid-rmhv4bp6>Быстрый старт</span></a></li><li data-astro-cid-rmhv4bp6><details open data-astro-cid-rmhv4bp6><summary data-astro-cid-rmhv4bp6><span class="group-label" data-astro-cid-rmhv4bp6><span class="large" data-astro-cid-rmhv4bp6>Руководства</span></span><svg class="caret" data-astro-cid-rmhv4bp6="true" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;" data-astro-cid-hkc32dio><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="1"></sl-sidebar-restore><ul data-astro-cid-rmhv4bp6><li data-astro-cid-rmhv4bp6><a href="/ru/loading-screen/guides/modes/" data-astro-cid-rmhv4bp6><span data-astro-cid-rmhv4bp6>Режимы и закрытие</span></a></li><li data-astro-cid-rmhv4bp6><a href="/ru/loading-screen/guides/custom-widget/" data-astro-cid-rmhv4bp6><span data-astro-cid-rmhv4bp6>Свой виджет и пресеты</span></a></li><li data-astro-cid-rmhv4bp6><a href="/ru/loading-screen/guides/startup/" data-astro-cid-rmhv4bp6><span data-astro-cid-rmhv4bp6>Стартовый экран</span></a></li><li data-astro-cid-rmhv4bp6><a href="/ru/loading-screen/guides/holds/" data-astro-cid-rmhv4bp6><span data-astro-cid-rmhv4bp6>Удержания</span></a></li><li data-astro-cid-rmhv4bp6><a href="/ru/loading-screen/guides/content/" data-astro-cid-rmhv4bp6><span data-astro-cid-rmhv4bp6>Контент и подсказки</span></a></li><li data-astro-cid-rmhv4bp6><a href="/ru/loading-screen/guides/game-features/" data-astro-cid-rmhv4bp6><span data-astro-cid-rmhv4bp6>Game Features</span></a></li><li data-astro-cid-rmhv4bp6><a href="/ru/loading-screen/guides/progress-pso/" data-astro-cid-rmhv4bp6><span data-astro-cid-rmhv4bp6>Прогресс и PSO</span></a></li><li data-astro-cid-rmhv4bp6><a href="/ru/loading-screen/guides/multiplayer/" data-astro-cid-rmhv4bp6><span data-astro-cid-rmhv4bp6>Мультиплеер</span></a></li><li data-astro-cid-rmhv4bp6><a href="/ru/loading-screen/guides/accessibility/" data-astro-cid-rmhv4bp6><span data-astro-cid-rmhv4bp6>Доступность</span></a></li><li data-astro-cid-rmhv4bp6><a href="/ru/loading-screen/guides/cpp/" data-astro-cid-rmhv4bp6><span data-astro-cid-rmhv4bp6>C++ API</span></a></li></ul></details></li><li data-astro-cid-rmhv4bp6><details open data-astro-cid-rmhv4bp6><summary data-astro-cid-rmhv4bp6><span class="group-label" data-astro-cid-rmhv4bp6><span class="large" data-astro-cid-rmhv4bp6>Справочник</span></span><svg class="caret" data-astro-cid-rmhv4bp6="true" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;" data-astro-cid-hkc32dio><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="2"></sl-sidebar-restore><ul data-astro-cid-rmhv4bp6><li data-astro-cid-rmhv4bp6><a href="/ru/loading-screen/reference/settings/" data-astro-cid-rmhv4bp6><span data-astro-cid-rmhv4bp6>Настройки игрового экрана</span></a></li><li data-astro-cid-rmhv4bp6><a href="/ru/loading-screen/reference/startup-settings/" data-astro-cid-rmhv4bp6><span data-astro-cid-rmhv4bp6>Настройки стартового экрана</span></a></li><li data-astro-cid-rmhv4bp6><a href="/ru/loading-screen/reference/blueprint/" aria-current="page" data-astro-cid-rmhv4bp6><span data-astro-cid-rmhv4bp6>API Blueprint</span></a></li><li data-astro-cid-rmhv4bp6><a href="/ru/loading-screen/reference/elements/" data-astro-cid-rmhv4bp6><span data-astro-cid-rmhv4bp6>Элементы UMG</span></a></li><li data-astro-cid-rmhv4bp6><a href="/ru/loading-screen/reference/console/" data-astro-cid-rmhv4bp6><span data-astro-cid-rmhv4bp6>Консольные команды и переменные</span></a></li></ul></details></li><li data-astro-cid-rmhv4bp6><a href="/ru/loading-screen/whats-new/" data-astro-cid-rmhv4bp6><span data-astro-cid-rmhv4bp6>Что нового</span></a></li><li data-astro-cid-rmhv4bp6><a href="/ru/loading-screen/troubleshooting/" data-astro-cid-rmhv4bp6><span data-astro-cid-rmhv4bp6>Диагностика</span></a></li><li data-astro-cid-rmhv4bp6><a href="/ru/loading-screen/limitations/" data-astro-cid-rmhv4bp6><span data-astro-cid-rmhv4bp6>Ограничения</span></a></li><li data-astro-cid-rmhv4bp6><a href="/ru/loading-screen/upgrade-from-1-0-0/" data-astro-cid-rmhv4bp6><span data-astro-cid-rmhv4bp6>Переход с 1.0.0</span></a></li><li data-astro-cid-rmhv4bp6><a href="/ru/loading-screen/support/" data-astro-cid-rmhv4bp6><span data-astro-cid-rmhv4bp6>Поддержка</span></a></li></ul></details></li></ul><script aria-hidden="true">
+		(() => {
+			const scroller = document.getElementById('starlight__sidebar');
+			if (!window._starlightScrollRestore || !scroller) return;
+			scroller.scrollTop = window._starlightScrollRestore;
+			delete window._starlightScrollRestore;
+		})();
+	</script></sl-sidebar-state-persist><div class="md:sl-hidden"><div class="mobile-preferences sl-flex" data-astro-cid-p4azlveh><div class="social-icons" data-astro-cid-p4azlveh></div><starlight-theme-select data-astro-cid-smhvfpqh="true"><label style="--sl-select-width: 6.25em" data-astro-cid-2z5xp7gb><span class="sr-only" data-astro-cid-2z5xp7gb>Выберите тему</span><span class="icon label-icon" data-astro-cid-2z5xp7gb><svg class="sl-theme-icon-dark" data-astro-cid-smhvfpqh="true" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;" data-astro-cid-hkc32dio><path d="M21.64 13a1 1 0 0 0-1.05-.14 8.049 8.049 0 0 1-3.37.73 8.15 8.15 0 0 1-8.14-8.1 8.59 8.59 0 0 1 .25-2A1 1 0 0 0 8 2.36a10.14 10.14 0 1 0 14 11.69 1 1 0 0 0-.36-1.05Zm-9.5 6.69A8.14 8.14 0 0 1 7.08 5.22v.27a10.15 10.15 0 0 0 10.14 10.14 9.784 9.784 0 0 0 2.1-.22 8.11 8.11 0 0 1-7.18 4.32v-.04Z"/></svg><svg class="sl-theme-icon-light" data-astro-cid-smhvfpqh="true" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;" data-astro-cid-hkc32dio><path d="M5 12a1 1 0 0 0-1-1H3a1 1 0 0 0 0 2h1a1 1 0 0 0 1-1Zm.64 5-.71.71a1 1 0 0 0 0 1.41 1 1 0 0 0 1.41 0l.71-.71A1 1 0 0 0 5.64 17ZM12 5a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v1a1 1 0 0 0 1 1Zm5.66 2.34a1 1 0 0 0 .7-.29l.71-.71a1 1 0 1 0-1.41-1.41l-.66.71a1 1 0 0 0 0 1.41 1 1 0 0 0 .66.29Zm-12-.29a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.71-.71a1.004 1.004 0 1 0-1.43 1.41l.73.71ZM21 11h-1a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm-2.64 6A1 1 0 0 0 17 18.36l.71.71a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.76-.66ZM12 6.5a5.5 5.5 0 1 0 5.5 5.5A5.51 5.51 0 0 0 12 6.5Zm0 9a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Zm0 3.5a1 1 0 0 0-1 1v1a1 1 0 0 0 2 0v-1a1 1 0 0 0-1-1Z"/></svg><svg class="sl-theme-icon-auto" data-astro-cid-smhvfpqh="true" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;" data-astro-cid-hkc32dio><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg></span><select autocomplete="off" data-astro-cid-2z5xp7gb><option value="dark" data-astro-cid-2z5xp7gb>Тёмная</option><option value="light" data-astro-cid-2z5xp7gb>Светлая</option><option value="auto" selected data-astro-cid-2z5xp7gb>Авто</option></select><svg class="icon caret" data-astro-cid-2z5xp7gb="true" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;" data-astro-cid-hkc32dio><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg></label></starlight-theme-select><script>(() => {
+		const theme = (typeof localStorage !== 'undefined' && localStorage.getItem('starlight-theme'));
+		if (theme) document.querySelectorAll('starlight-theme-select select').forEach((s) => { s.value = theme; });
+	})();</script><starlight-lang-select><label style="--sl-select-width: 7em" data-astro-cid-2z5xp7gb><span class="sr-only" data-astro-cid-2z5xp7gb>Выберите язык</span><span class="icon label-icon" data-astro-cid-2z5xp7gb><svg data-astro-cid-2z5xp7gb="true" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;" data-astro-cid-hkc32dio><path fill-rule="evenodd" d="M8.516 3a.94.94 0 0 0-.941.94v1.15H2.94a.94.94 0 1 0 0 1.882h7.362a7.422 7.422 0 0 1-1.787 3.958 7.42 7.42 0 0 1-1.422-2.425.94.94 0 1 0-1.774.627 9.303 9.303 0 0 0 1.785 3.043 7.422 7.422 0 0 1-4.164 1.278.94.94 0 1 0 0 1.881 9.303 9.303 0 0 0 5.575-1.855 9.303 9.303 0 0 0 4.11 1.74l-.763 1.525a.968.968 0 0 0-.016.034l-1.385 2.77a.94.94 0 1 0 1.683.841l1.133-2.267h5.806l1.134 2.267a.94.94 0 0 0 1.683-.841l-1.385-2.769a.95.95 0 0 0-.018-.036l-3.476-6.951a.94.94 0 0 0-1.682 0l-1.82 3.639a7.423 7.423 0 0 1-3.593-1.256 9.303 9.303 0 0 0 2.27-5.203h1.894a.94.94 0 0 0 0-1.881H9.456V3.94A.94.94 0 0 0 8.516 3Zm6.426 11.794a1.068 1.068 0 0 1-.02.039l-.703 1.407h3.924l-1.962-3.924-1.24 2.478Z" clip-rule="evenodd"/></svg></span><select autocomplete="off" data-astro-cid-2z5xp7gb><option value="/loading-screen/reference/blueprint/" data-astro-cid-2z5xp7gb>English</option><option value="/ru/loading-screen/reference/blueprint/" selected data-astro-cid-2z5xp7gb>Русский</option></select><svg class="icon caret" data-astro-cid-2z5xp7gb="true" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;" data-astro-cid-hkc32dio><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg></label></starlight-lang-select></div></div></div></sl-sidebar-pane></nav><div class="main-frame" data-astro-cid-yntsjkba><script type="module">var e=document.getElementById(`starlight__sidebar`),t=e?.querySelector(`sl-sidebar-state-persist`),n=`sl-sidebar-state`,r=()=>{let r=[],i=t?.dataset.hash||``;try{let e=sessionStorage.getItem(n),t=JSON.parse(e||`{}`);Array.isArray(t.open)&&t.hash===i&&(r=t.open)}catch{}return{hash:i,open:r,scroll:e?.scrollTop||0}},i=e=>{try{sessionStorage.setItem(n,JSON.stringify(e))}catch{}},a=()=>i(r()),o=(e,t)=>{let n=r();n.open[t]=e,i(n)};t?.addEventListener(`click`,e=>{if(!(e.target instanceof Element))return;let t=e.target.closest(`summary`)?.closest(`details`);if(!t)return;let n=t.querySelector(`sl-sidebar-restore`),r=parseInt(n?.dataset.index||``);isNaN(r)||o(!t.open,r)}),addEventListener(`visibilitychange`,()=>{document.visibilityState===`hidden`&&a()});</script><div class="lg:sl-flex" data-astro-cid-lrzkfocr><aside class="right-sidebar-container print:hidden" data-astro-cid-lrzkfocr><div class="right-sidebar" data-astro-cid-lrzkfocr><div class="lg:sl-hidden" data-astro-cid-qok35upx><mobile-starlight-toc data-min-h="2" data-max-h="3" data-astro-cid-66cqc7ze="true"><nav aria-labelledby="starlight__on-this-page--mobile" data-astro-cid-66cqc7ze><details id="starlight__mobile-toc" data-astro-cid-66cqc7ze><summary id="starlight__on-this-page--mobile" class="sl-flex" data-astro-cid-66cqc7ze><span class="toggle sl-flex" data-astro-cid-66cqc7ze>На этой странице<svg class="caret" data-astro-cid-66cqc7ze="true" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1rem;" data-astro-cid-hkc32dio><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></span><span class="display-current" data-astro-cid-66cqc7ze></span></summary><div class="dropdown" data-astro-cid-66cqc7ze><ul class="isMobile" style="--depth: 0;" data-astro-cid-jugkfwgx><li style="--depth: 0;" data-astro-cid-jugkfwgx><a href="#_top" style="--depth: 0;" data-astro-cid-jugkfwgx><span style="--depth: 0;" data-astro-cid-jugkfwgx>Обзор</span></a></li><li style="--depth: 0;" data-astro-cid-jugkfwgx><a href="#usgcasync-action-wait-for-all-players-перевод-отсутствует" style="--depth: 0;" data-astro-cid-jugkfwgx><span style="--depth: 0;" data-astro-cid-jugkfwgx>USGCAsync Action Wait for All Players (перевод отсутствует)</span></a><ul class="isMobile" style="--depth: 1;" data-astro-cid-jugkfwgx><li style="--depth: 1;" data-astro-cid-jugkfwgx><a href="#sgcloading-screen" style="--depth: 1;" data-astro-cid-jugkfwgx><span style="--depth: 1;" data-astro-cid-jugkfwgx>SGC|Loading Screen</span></a></li><li style="--depth: 1;" data-astro-cid-jugkfwgx><a href="#выходы-async-действия" style="--depth: 1;" data-astro-cid-jugkfwgx><span style="--depth: 1;" data-astro-cid-jugkfwgx>Выходы async-действия</span></a></li></ul></li><li style="--depth: 0;" data-astro-cid-jugkfwgx><a href="#usgcasync-action-wait-loading-screen-dismissed-перевод-отсутствует" style="--depth: 0;" data-astro-cid-jugkfwgx><span style="--depth: 0;" data-astro-cid-jugkfwgx>USGCAsync Action Wait Loading Screen Dismissed (перевод отсутствует)</span></a><ul class="isMobile" style="--depth: 1;" data-astro-cid-jugkfwgx><li style="--depth: 1;" data-astro-cid-jugkfwgx><a href="#sgcloading-screen-1" style="--depth: 1;" data-astro-cid-jugkfwgx><span style="--depth: 1;" data-astro-cid-jugkfwgx>SGC|Loading Screen</span></a></li><li style="--depth: 1;" data-astro-cid-jugkfwgx><a href="#выходы-async-действия-1" style="--depth: 1;" data-astro-cid-jugkfwgx><span style="--depth: 1;" data-astro-cid-jugkfwgx>Выходы async-действия</span></a></li></ul></li><li style="--depth: 0;" data-astro-cid-jugkfwgx><a href="#usgcasync-action-wait-loading-screen-shown-перевод-отсутствует" style="--depth: 0;" data-astro-cid-jugkfwgx><span style="--depth: 0;" data-astro-cid-jugkfwgx>USGCAsync Action Wait Loading Screen Shown (перевод отсутствует)</span></a><ul class="isMobile" style="--depth: 1;" data-astro-cid-jugkfwgx><li style="--depth: 1;" data-astro-cid-jugkfwgx><a href="#sgcloading-screen-2" style="--depth: 1;" data-astro-cid-jugkfwgx><span style="--depth: 1;" data-astro-cid-jugkfwgx>SGC|Loading Screen</span></a></li><li style="--depth: 1;" data-astro-cid-jugkfwgx><a href="#выходы-async-действия-2" style="--depth: 1;" data-astro-cid-jugkfwgx><span style="--depth: 1;" data-astro-cid-jugkfwgx>Выходы async-действия</span></a></li></ul></li><li style="--depth: 0;" data-astro-cid-jugkfwgx><a href="#usgcasync-action-watch-psoprecompile-перевод-отсутствует" style="--depth: 0;" data-astro-cid-jugkfwgx><span style="--depth: 0;" data-astro-cid-jugkfwgx>USGCAsync Action Watch PSOPrecompile (перевод отсутствует)</span></a><ul class="isMobile" style="--depth: 1;" data-astro-cid-jugkfwgx><li style="--depth: 1;" data-astro-cid-jugkfwgx><a href="#sgcloading-screenpso" style="--depth: 1;" data-astro-cid-jugkfwgx><span style="--depth: 1;" data-astro-cid-jugkfwgx>SGC|Loading Screen|PSO</span></a></li><li style="--depth: 1;" data-astro-cid-jugkfwgx><a href="#выходы-async-действия-3" style="--depth: 1;" data-astro-cid-jugkfwgx><span style="--depth: 1;" data-astro-cid-jugkfwgx>Выходы async-действия</span></a></li></ul></li><li style="--depth: 0;" data-astro-cid-jugkfwgx><a href="#usgcloading-screen-blueprint-library-перевод-отсутствует" style="--depth: 0;" data-astro-cid-jugkfwgx><span style="--depth: 0;" data-astro-cid-jugkfwgx>USGCLoading Screen Blueprint Library (перевод отсутствует)</span></a><ul class="isMobile" style="--depth: 1;" data-astro-cid-jugkfwgx><li style="--depth: 1;" data-astro-cid-jugkfwgx><a href="#sgcloading-screen-3" style="--depth: 1;" data-astro-cid-jugkfwgx><span style="--depth: 1;" data-astro-cid-jugkfwgx>SGC|Loading Screen</span></a></li><li style="--depth: 1;" data-astro-cid-jugkfwgx><a href="#sgcloading-screenaccessibility" style="--depth: 1;" data-astro-cid-jugkfwgx><span style="--depth: 1;" data-astro-cid-jugkfwgx>SGC|Loading Screen|Accessibility</span></a></li><li style="--depth: 1;" data-astro-cid-jugkfwgx><a href="#sgcloading-screenholds" style="--depth: 1;" data-astro-cid-jugkfwgx><span style="--depth: 1;" data-astro-cid-jugkfwgx>SGC|Loading Screen|Holds</span></a></li><li style="--depth: 1;" data-astro-cid-jugkfwgx><a href="#sgcloading-screenslides" style="--depth: 1;" data-astro-cid-jugkfwgx><span style="--depth: 1;" data-astro-cid-jugkfwgx>SGC|Loading Screen|Slides</span></a></li><li style="--depth: 1;" data-astro-cid-jugkfwgx><a href="#sgcloading-screenpso-1" style="--depth: 1;" data-astro-cid-jugkfwgx><span style="--depth: 1;" data-astro-cid-jugkfwgx>SGC|Loading Screen|PSO</span></a></li><li style="--depth: 1;" data-astro-cid-jugkfwgx><a href="#sgcloading-screenmetrics-overlay" style="--depth: 1;" data-astro-cid-jugkfwgx><span style="--depth: 1;" data-astro-cid-jugkfwgx>SGC|Loading Screen|Metrics Overlay</span></a></li></ul></li><li style="--depth: 0;" data-astro-cid-jugkfwgx><a href="#sgc-loading-background-перевод-отсутствует" style="--depth: 0;" data-astro-cid-jugkfwgx><span style="--depth: 0;" data-astro-cid-jugkfwgx>SGC Loading Background (перевод отсутствует)</span></a><ul class="isMobile" style="--depth: 1;" data-astro-cid-jugkfwgx><li style="--depth: 1;" data-astro-cid-jugkfwgx><a href="#background" style="--depth: 1;" data-astro-cid-jugkfwgx><span style="--depth: 1;" data-astro-cid-jugkfwgx>Background</span></a></li></ul></li><li style="--depth: 0;" data-astro-cid-jugkfwgx><a href="#esgcloading-content-mode-перевод-отсутствует" style="--depth: 0;" data-astro-cid-jugkfwgx><span style="--depth: 0;" data-astro-cid-jugkfwgx>ESGCLoading Content Mode (перевод отсутствует)</span></a></li><li style="--depth: 0;" data-astro-cid-jugkfwgx><a href="#fsgcloading-hold-перевод-отсутствует" style="--depth: 0;" data-astro-cid-jugkfwgx><span style="--depth: 0;" data-astro-cid-jugkfwgx>FSGCLoading Hold (перевод отсутствует)</span></a><ul class="isMobile" style="--depth: 1;" data-astro-cid-jugkfwgx><li style="--depth: 1;" data-astro-cid-jugkfwgx><a href="#sgcloading-screen-4" style="--depth: 1;" data-astro-cid-jugkfwgx><span style="--depth: 1;" data-astro-cid-jugkfwgx>SGC|Loading Screen</span></a></li></ul></li><li style="--depth: 0;" data-astro-cid-jugkfwgx><a href="#esgcloading-screen-mode-перевод-отсутствует" style="--depth: 0;" data-astro-cid-jugkfwgx><span style="--depth: 0;" data-astro-cid-jugkfwgx>ESGCLoading Screen Mode (перевод отсутствует)</span></a></li><li style="--depth: 0;" data-astro-cid-jugkfwgx><a href="#esgcdebug-overlay-corner-перевод-отсутствует" style="--depth: 0;" data-astro-cid-jugkfwgx><span style="--depth: 0;" data-astro-cid-jugkfwgx>ESGCDebug Overlay Corner (перевод отсутствует)</span></a></li><li style="--depth: 0;" data-astro-cid-jugkfwgx><a href="#esgcdebug-overlay-mode-перевод-отсутствует" style="--depth: 0;" data-astro-cid-jugkfwgx><span style="--depth: 0;" data-astro-cid-jugkfwgx>ESGCDebug Overlay Mode (перевод отсутствует)</span></a></li><li style="--depth: 0;" data-astro-cid-jugkfwgx><a href="#esgcloading-screen-state-перевод-отсутствует" style="--depth: 0;" data-astro-cid-jugkfwgx><span style="--depth: 0;" data-astro-cid-jugkfwgx>ESGCLoading Screen State (перевод отсутствует)</span></a></li><li style="--depth: 0;" data-astro-cid-jugkfwgx><a href="#esgcloading-screen-show-reason-перевод-отсутствует" style="--depth: 0;" data-astro-cid-jugkfwgx><span style="--depth: 0;" data-astro-cid-jugkfwgx>ESGCLoading Screen Show Reason (перевод отсутствует)</span></a></li><li style="--depth: 0;" data-astro-cid-jugkfwgx><a href="#esgcloading-screen-outcome-перевод-отсутствует" style="--depth: 0;" data-astro-cid-jugkfwgx><span style="--depth: 0;" data-astro-cid-jugkfwgx>ESGCLoading Screen Outcome (перевод отсутствует)</span></a></li><li style="--depth: 0;" data-astro-cid-jugkfwgx><a href="#esgcloading-screen-shown-outcome-перевод-отсутствует" style="--depth: 0;" data-astro-cid-jugkfwgx><span style="--depth: 0;" data-astro-cid-jugkfwgx>ESGCLoading Screen Shown Outcome (перевод отсутствует)</span></a></li><li style="--depth: 0;" data-astro-cid-jugkfwgx><a href="#fsgcloading-screen-context-перевод-отсутствует" style="--depth: 0;" data-astro-cid-jugkfwgx><span style="--depth: 0;" data-astro-cid-jugkfwgx>FSGCLoading Screen Context (перевод отсутствует)</span></a><ul class="isMobile" style="--depth: 1;" data-astro-cid-jugkfwgx><li style="--depth: 1;" data-astro-cid-jugkfwgx><a href="#sgcloading-screen-5" style="--depth: 1;" data-astro-cid-jugkfwgx><span style="--depth: 1;" data-astro-cid-jugkfwgx>SGC|Loading Screen</span></a></li></ul></li><li style="--depth: 0;" data-astro-cid-jugkfwgx><a href="#fsgcloading-screen-completion-перевод-отсутствует" style="--depth: 0;" data-astro-cid-jugkfwgx><span style="--depth: 0;" data-astro-cid-jugkfwgx>FSGCLoading Screen Completion (перевод отсутствует)</span></a><ul class="isMobile" style="--depth: 1;" data-astro-cid-jugkfwgx><li style="--depth: 1;" data-astro-cid-jugkfwgx><a href="#sgcloading-screen-6" style="--depth: 1;" data-astro-cid-jugkfwgx><span style="--depth: 1;" data-astro-cid-jugkfwgx>SGC|Loading Screen</span></a></li></ul></li></ul></div></details></nav></mobile-starlight-toc><script type="module" src="/_astro/MobileTableOfContents.astro_astro_type_script_index_0_lang.C3fM4Kra.js"></script></div><div class="right-sidebar-panel sl-hidden lg:sl-block" data-astro-cid-qok35upx><div class="sl-container" data-astro-cid-qok35upx><starlight-toc data-min-h="2" data-max-h="3"><nav aria-labelledby="starlight__on-this-page"><h2 id="starlight__on-this-page">На этой странице</h2><ul style="--depth: 0;" data-astro-cid-jugkfwgx><li style="--depth: 0;" data-astro-cid-jugkfwgx><a href="#_top" style="--depth: 0;" data-astro-cid-jugkfwgx><span style="--depth: 0;" data-astro-cid-jugkfwgx>Обзор</span></a></li><li style="--depth: 0;" data-astro-cid-jugkfwgx><a href="#usgcasync-action-wait-for-all-players-перевод-отсутствует" style="--depth: 0;" data-astro-cid-jugkfwgx><span style="--depth: 0;" data-astro-cid-jugkfwgx>USGCAsync Action Wait for All Players (перевод отсутствует)</span></a><ul style="--depth: 1;" data-astro-cid-jugkfwgx><li style="--depth: 1;" data-astro-cid-jugkfwgx><a href="#sgcloading-screen" style="--depth: 1;" data-astro-cid-jugkfwgx><span style="--depth: 1;" data-astro-cid-jugkfwgx>SGC|Loading Screen</span></a></li><li style="--depth: 1;" data-astro-cid-jugkfwgx><a href="#выходы-async-действия" style="--depth: 1;" data-astro-cid-jugkfwgx><span style="--depth: 1;" data-astro-cid-jugkfwgx>Выходы async-действия</span></a></li></ul></li><li style="--depth: 0;" data-astro-cid-jugkfwgx><a href="#usgcasync-action-wait-loading-screen-dismissed-перевод-отсутствует" style="--depth: 0;" data-astro-cid-jugkfwgx><span style="--depth: 0;" data-astro-cid-jugkfwgx>USGCAsync Action Wait Loading Screen Dismissed (перевод отсутствует)</span></a><ul style="--depth: 1;" data-astro-cid-jugkfwgx><li style="--depth: 1;" data-astro-cid-jugkfwgx><a href="#sgcloading-screen-1" style="--depth: 1;" data-astro-cid-jugkfwgx><span style="--depth: 1;" data-astro-cid-jugkfwgx>SGC|Loading Screen</span></a></li><li style="--depth: 1;" data-astro-cid-jugkfwgx><a href="#выходы-async-действия-1" style="--depth: 1;" data-astro-cid-jugkfwgx><span style="--depth: 1;" data-astro-cid-jugkfwgx>Выходы async-действия</span></a></li></ul></li><li style="--depth: 0;" data-astro-cid-jugkfwgx><a href="#usgcasync-action-wait-loading-screen-shown-перевод-отсутствует" style="--depth: 0;" data-astro-cid-jugkfwgx><span style="--depth: 0;" data-astro-cid-jugkfwgx>USGCAsync Action Wait Loading Screen Shown (перевод отсутствует)</span></a><ul style="--depth: 1;" data-astro-cid-jugkfwgx><li style="--depth: 1;" data-astro-cid-jugkfwgx><a href="#sgcloading-screen-2" style="--depth: 1;" data-astro-cid-jugkfwgx><span style="--depth: 1;" data-astro-cid-jugkfwgx>SGC|Loading Screen</span></a></li><li style="--depth: 1;" data-astro-cid-jugkfwgx><a href="#выходы-async-действия-2" style="--depth: 1;" data-astro-cid-jugkfwgx><span style="--depth: 1;" data-astro-cid-jugkfwgx>Выходы async-действия</span></a></li></ul></li><li style="--depth: 0;" data-astro-cid-jugkfwgx><a href="#usgcasync-action-watch-psoprecompile-перевод-отсутствует" style="--depth: 0;" data-astro-cid-jugkfwgx><span style="--depth: 0;" data-astro-cid-jugkfwgx>USGCAsync Action Watch PSOPrecompile (перевод отсутствует)</span></a><ul style="--depth: 1;" data-astro-cid-jugkfwgx><li style="--depth: 1;" data-astro-cid-jugkfwgx><a href="#sgcloading-screenpso" style="--depth: 1;" data-astro-cid-jugkfwgx><span style="--depth: 1;" data-astro-cid-jugkfwgx>SGC|Loading Screen|PSO</span></a></li><li style="--depth: 1;" data-astro-cid-jugkfwgx><a href="#выходы-async-действия-3" style="--depth: 1;" data-astro-cid-jugkfwgx><span style="--depth: 1;" data-astro-cid-jugkfwgx>Выходы async-действия</span></a></li></ul></li><li style="--depth: 0;" data-astro-cid-jugkfwgx><a href="#usgcloading-screen-blueprint-library-перевод-отсутствует" style="--depth: 0;" data-astro-cid-jugkfwgx><span style="--depth: 0;" data-astro-cid-jugkfwgx>USGCLoading Screen Blueprint Library (перевод отсутствует)</span></a><ul style="--depth: 1;" data-astro-cid-jugkfwgx><li style="--depth: 1;" data-astro-cid-jugkfwgx><a href="#sgcloading-screen-3" style="--depth: 1;" data-astro-cid-jugkfwgx><span style="--depth: 1;" data-astro-cid-jugkfwgx>SGC|Loading Screen</span></a></li><li style="--depth: 1;" data-astro-cid-jugkfwgx><a href="#sgcloading-screenaccessibility" style="--depth: 1;" data-astro-cid-jugkfwgx><span style="--depth: 1;" data-astro-cid-jugkfwgx>SGC|Loading Screen|Accessibility</span></a></li><li style="--depth: 1;" data-astro-cid-jugkfwgx><a href="#sgcloading-screenholds" style="--depth: 1;" data-astro-cid-jugkfwgx><span style="--depth: 1;" data-astro-cid-jugkfwgx>SGC|Loading Screen|Holds</span></a></li><li style="--depth: 1;" data-astro-cid-jugkfwgx><a href="#sgcloading-screenslides" style="--depth: 1;" data-astro-cid-jugkfwgx><span style="--depth: 1;" data-astro-cid-jugkfwgx>SGC|Loading Screen|Slides</span></a></li><li style="--depth: 1;" data-astro-cid-jugkfwgx><a href="#sgcloading-screenpso-1" style="--depth: 1;" data-astro-cid-jugkfwgx><span style="--depth: 1;" data-astro-cid-jugkfwgx>SGC|Loading Screen|PSO</span></a></li><li style="--depth: 1;" data-astro-cid-jugkfwgx><a href="#sgcloading-screenmetrics-overlay" style="--depth: 1;" data-astro-cid-jugkfwgx><span style="--depth: 1;" data-astro-cid-jugkfwgx>SGC|Loading Screen|Metrics Overlay</span></a></li></ul></li><li style="--depth: 0;" data-astro-cid-jugkfwgx><a href="#sgc-loading-background-перевод-отсутствует" style="--depth: 0;" data-astro-cid-jugkfwgx><span style="--depth: 0;" data-astro-cid-jugkfwgx>SGC Loading Background (перевод отсутствует)</span></a><ul style="--depth: 1;" data-astro-cid-jugkfwgx><li style="--depth: 1;" data-astro-cid-jugkfwgx><a href="#background" style="--depth: 1;" data-astro-cid-jugkfwgx><span style="--depth: 1;" data-astro-cid-jugkfwgx>Background</span></a></li></ul></li><li style="--depth: 0;" data-astro-cid-jugkfwgx><a href="#esgcloading-content-mode-перевод-отсутствует" style="--depth: 0;" data-astro-cid-jugkfwgx><span style="--depth: 0;" data-astro-cid-jugkfwgx>ESGCLoading Content Mode (перевод отсутствует)</span></a></li><li style="--depth: 0;" data-astro-cid-jugkfwgx><a href="#fsgcloading-hold-перевод-отсутствует" style="--depth: 0;" data-astro-cid-jugkfwgx><span style="--depth: 0;" data-astro-cid-jugkfwgx>FSGCLoading Hold (перевод отсутствует)</span></a><ul style="--depth: 1;" data-astro-cid-jugkfwgx><li style="--depth: 1;" data-astro-cid-jugkfwgx><a href="#sgcloading-screen-4" style="--depth: 1;" data-astro-cid-jugkfwgx><span style="--depth: 1;" data-astro-cid-jugkfwgx>SGC|Loading Screen</span></a></li></ul></li><li style="--depth: 0;" data-astro-cid-jugkfwgx><a href="#esgcloading-screen-mode-перевод-отсутствует" style="--depth: 0;" data-astro-cid-jugkfwgx><span style="--depth: 0;" data-astro-cid-jugkfwgx>ESGCLoading Screen Mode (перевод отсутствует)</span></a></li><li style="--depth: 0;" data-astro-cid-jugkfwgx><a href="#esgcdebug-overlay-corner-перевод-отсутствует" style="--depth: 0;" data-astro-cid-jugkfwgx><span style="--depth: 0;" data-astro-cid-jugkfwgx>ESGCDebug Overlay Corner (перевод отсутствует)</span></a></li><li style="--depth: 0;" data-astro-cid-jugkfwgx><a href="#esgcdebug-overlay-mode-перевод-отсутствует" style="--depth: 0;" data-astro-cid-jugkfwgx><span style="--depth: 0;" data-astro-cid-jugkfwgx>ESGCDebug Overlay Mode (перевод отсутствует)</span></a></li><li style="--depth: 0;" data-astro-cid-jugkfwgx><a href="#esgcloading-screen-state-перевод-отсутствует" style="--depth: 0;" data-astro-cid-jugkfwgx><span style="--depth: 0;" data-astro-cid-jugkfwgx>ESGCLoading Screen State (перевод отсутствует)</span></a></li><li style="--depth: 0;" data-astro-cid-jugkfwgx><a href="#esgcloading-screen-show-reason-перевод-отсутствует" style="--depth: 0;" data-astro-cid-jugkfwgx><span style="--depth: 0;" data-astro-cid-jugkfwgx>ESGCLoading Screen Show Reason (перевод отсутствует)</span></a></li><li style="--depth: 0;" data-astro-cid-jugkfwgx><a href="#esgcloading-screen-outcome-перевод-отсутствует" style="--depth: 0;" data-astro-cid-jugkfwgx><span style="--depth: 0;" data-astro-cid-jugkfwgx>ESGCLoading Screen Outcome (перевод отсутствует)</span></a></li><li style="--depth: 0;" data-astro-cid-jugkfwgx><a href="#esgcloading-screen-shown-outcome-перевод-отсутствует" style="--depth: 0;" data-astro-cid-jugkfwgx><span style="--depth: 0;" data-astro-cid-jugkfwgx>ESGCLoading Screen Shown Outcome (перевод отсутствует)</span></a></li><li style="--depth: 0;" data-astro-cid-jugkfwgx><a href="#fsgcloading-screen-context-перевод-отсутствует" style="--depth: 0;" data-astro-cid-jugkfwgx><span style="--depth: 0;" data-astro-cid-jugkfwgx>FSGCLoading Screen Context (перевод отсутствует)</span></a><ul style="--depth: 1;" data-astro-cid-jugkfwgx><li style="--depth: 1;" data-astro-cid-jugkfwgx><a href="#sgcloading-screen-5" style="--depth: 1;" data-astro-cid-jugkfwgx><span style="--depth: 1;" data-astro-cid-jugkfwgx>SGC|Loading Screen</span></a></li></ul></li><li style="--depth: 0;" data-astro-cid-jugkfwgx><a href="#fsgcloading-screen-completion-перевод-отсутствует" style="--depth: 0;" data-astro-cid-jugkfwgx><span style="--depth: 0;" data-astro-cid-jugkfwgx>FSGCLoading Screen Completion (перевод отсутствует)</span></a><ul style="--depth: 1;" data-astro-cid-jugkfwgx><li style="--depth: 1;" data-astro-cid-jugkfwgx><a href="#sgcloading-screen-6" style="--depth: 1;" data-astro-cid-jugkfwgx><span style="--depth: 1;" data-astro-cid-jugkfwgx>SGC|Loading Screen</span></a></li></ul></li></ul></nav></starlight-toc><script type="module" src="/_astro/TableOfContents.astro_astro_type_script_index_0_lang.BpJaGz7G.js"></script></div></div></div></aside><div class="main-pane" data-astro-cid-lrzkfocr><main data-pagefind-body lang="ru" dir="ltr" data-astro-cid-g5ptsecz><div class="sl-banner" data-pagefind-ignore data-astro-cid-ofbg3qve>Документация описывает SGC Loading Screen 2.5.0, версия скоро появится на FAB. Сейчас на FAB — 1.0.0.</div><div class="content-panel" data-astro-cid-a7po4psb><div class="sl-container" data-astro-cid-a7po4psb><h1 id="_top" data-astro-cid-bebwqqxs>API Blueprint</h1></div></div><div class="content-panel" data-astro-cid-a7po4psb><div class="sl-container" data-astro-cid-a7po4psb><starlight-image-zoom data-astro-cid-uhbei7rv="true"><template data-astro-cid-uhbei7rv><dialog class="starlight-image-zoom-dialog" data-astro-cid-uhbei7rv><button aria-label="Unzoom image" class="starlight-image-zoom-control" data-astro-cid-uhbei7rv><svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" data-astro-cid-uhbei7rv><use href="#starlight-image-zoom-icon-unzoom" data-astro-cid-uhbei7rv></use></svg></button><figure data-astro-cid-uhbei7rv></figure></dialog></template><svg xmlns="http://www.w3.org/2000/svg" style="display:none" data-astro-cid-uhbei7rv><symbol id="starlight-image-zoom-icon-zoom" viewBox="0 0 24 24" data-astro-cid-uhbei7rv><path d="M9.79 12.79 4 18.59V17a1 1 0 0 0-2 0v4a1 1 0 0 0 .08.38 1 1 0 0 0 .54.54A1 1 0 0 0 3 22h4a1 1 0 0 0 0-2H5.41l5.8-5.79a1 1 0 0 0-1.42-1.42ZM21.92 2.62a1 1 0 0 0-.54-.54A1 1 0 0 0 21 2h-4a1 1 0 0 0 0 2h1.59l-5.8 5.79a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L20 5.41V7a1 1 0 0 0 2 0V3a1 1 0 0 0-.08-.38Z" data-astro-cid-uhbei7rv></path></symbol><symbol id="starlight-image-zoom-icon-unzoom" viewBox="0 0 24 24" data-astro-cid-uhbei7rv><path d="M21.71 2.29a1 1 0 0 0-1.42 0l-5.79 5.8V6.5a1 1 0 0 0-2 0v4a1 1 0 0 0 .08.38 1 1 0 0 0 .54.54 1 1 0 0 0 .38.08h4a1 1 0 0 0 0-2h-1.59l5.8-5.79a1 1 0 0 0 0-1.42ZM10.88 12.58a1 1 0 0 0-.38-.08h-4a1 1 0 0 0 0 2h1.59l-5.8 5.79a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.79-5.8v1.59a1 1 0 0 0 2 0v-4a1 1 0 0 0-.08-.38 1 1 0 0 0-.54-.54Z" data-astro-cid-uhbei7rv></path></symbol></svg></starlight-image-zoom><script type="module" src="/_astro/ImageZoom.astro_astro_type_script_index_0_lang.BMacvPKd.js"></script><div class="sl-markdown-content"><!-- generated, do not edit -->
+<p><a id="USGCAsyncAction_WaitForAllPlayers"></a></p>
+<div class="sl-heading-wrapper level-h2"><h2 id="usgcasync-action-wait-for-all-players-перевод-отсутствует">USGCAsync Action Wait for All Players <em>(перевод отсутствует)</em></h2><a class="sl-anchor-link" href="#usgcasync-action-wait-for-all-players-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «USGCAsync Action Wait for All Players (перевод отсутствует)»</span></a></div>
+<p>Ждёт, пока сервер сообщит, что все игроки загрузили текущую карту (Wait For All Players).</p>
+<div class="sl-heading-wrapper level-h3"><h3 id="sgcloading-screen">SGC|Loading Screen</h3><a class="sl-anchor-link" href="#sgcloading-screen"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «SGC|Loading Screen»</span></a></div>
+<p><a id="USGCAsyncAction_WaitForAllPlayers.WaitForAllPlayersReady"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="wait-for-all-players-ready-перевод-отсутствует">Wait For All Players Ready <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#wait-for-all-players-ready-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Wait For All Players Ready (перевод отсутствует)»</span></a></div>
+<p>Waits until all players have loaded the current map, then fires On Ready. Call it after the map has loaded, for example before Dismiss Loading Screen in the manual modes. Fires at once when Wait For All Players is off or the game is not networked. Timed Out: the server stopped waiting because some players did not load in time. On a dedicated server, waits for the server’s current map readiness and uses only the server’s player wait timeout. If no player wait has started, keeps waiting until one starts or the world is cleaned up. World cleanup ends the wait without firing On Ready. <em>(перевод отсутствует)</em></p>
+<div class="expressive-code"><link rel="stylesheet" href="/_astro/ec.w36nc.css"><script type="module" src="/_astro/ec.0vx5m.js"></script><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">static USGCAsyncAction_WaitForAllPlayers* WaitForAllPlayersReady()</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="static USGCAsyncAction_WaitForAllPlayers* WaitForAllPlayersReady()"><div></div></button></div></figure></div>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Направление</th>
+<th>По умолчанию</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code dir="auto">ReturnValue</code></td>
+<td><code dir="auto">USGCAsyncAction_WaitForAllPlayers*</code></td>
+<td>output</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<div class="sl-heading-wrapper level-h3"><h3 id="выходы-async-действия">Выходы async-действия</h3><a class="sl-anchor-link" href="#выходы-async-действия"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Выходы async-действия»</span></a></div>
+<p><a id="USGCAsyncAction_WaitForAllPlayers.OnReady"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="on-ready-перевод-отсутствует">On Ready <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#on-ready-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «On Ready (перевод отсутствует)»</span></a></div>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">FSGCAllPlayersReadyDelegate OnReady</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="FSGCAllPlayersReadyDelegate OnReady"><div></div></button></div></figure></div>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Направление</th>
+<th>По умолчанию</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code dir="auto">bTimedOut</code></td>
+<td><code dir="auto">bool</code></td>
+<td>output</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="USGCAsyncAction_WaitLoadingScreenDismissed"></a></p>
+<div class="sl-heading-wrapper level-h2"><h2 id="usgcasync-action-wait-loading-screen-dismissed-перевод-отсутствует">USGCAsync Action Wait Loading Screen Dismissed <em>(перевод отсутствует)</em></h2><a class="sl-anchor-link" href="#usgcasync-action-wait-loading-screen-dismissed-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «USGCAsync Action Wait Loading Screen Dismissed (перевод отсутствует)»</span></a></div>
+<p>Ожидание (только успех), пока экран загрузки не скроется (после затухания по Dismiss).</p>
+<div class="sl-heading-wrapper level-h3"><h3 id="sgcloading-screen-1">SGC|Loading Screen</h3><a class="sl-anchor-link" href="#sgcloading-screen-1"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «SGC|Loading Screen»</span></a></div>
+<p><a id="USGCAsyncAction_WaitLoadingScreenDismissed.WaitForLoadingScreenDismissed"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="wait-for-loading-screen-dismissed-перевод-отсутствует">Wait For Loading Screen Dismissed <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#wait-for-loading-screen-dismissed-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Wait For Loading Screen Dismissed (перевод отсутствует)»</span></a></div>
+<p>Ждёт, пока экран загрузки скроется после затухания Dismiss. Срабатывает в следующем кадре, если экран не показан и не запрошен, и на dedicated server (там экрана нет).</p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">static USGCAsyncAction_WaitLoadingScreenDismissed* WaitForLoadingScreenDismissed()</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="static USGCAsyncAction_WaitLoadingScreenDismissed* WaitForLoadingScreenDismissed()"><div></div></button></div></figure></div>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Направление</th>
+<th>По умолчанию</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code dir="auto">ReturnValue</code></td>
+<td><code dir="auto">USGCAsyncAction_WaitLoadingScreenDismissed*</code></td>
+<td>output</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<div class="sl-heading-wrapper level-h3"><h3 id="выходы-async-действия-1">Выходы async-действия</h3><a class="sl-anchor-link" href="#выходы-async-действия-1"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Выходы async-действия»</span></a></div>
+<p><a id="USGCAsyncAction_WaitLoadingScreenDismissed.OnDismissed"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="on-dismissed-перевод-отсутствует">On Dismissed <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#on-dismissed-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «On Dismissed (перевод отсутствует)»</span></a></div>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">FSGCLoadingScreenDismissedAsyncDelegate OnDismissed</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="FSGCLoadingScreenDismissedAsyncDelegate OnDismissed"><div></div></button></div></figure></div>
+<p><a id="USGCAsyncAction_WaitLoadingScreenShown"></a></p>
+<div class="sl-heading-wrapper level-h2"><h2 id="usgcasync-action-wait-loading-screen-shown-перевод-отсутствует">USGCAsync Action Wait Loading Screen Shown <em>(перевод отсутствует)</em></h2><a class="sl-anchor-link" href="#usgcasync-action-wait-loading-screen-shown-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «USGCAsync Action Wait Loading Screen Shown (перевод отсутствует)»</span></a></div>
+<p>Waits for the current pending request, or the next request when idle, to show its screen. <em>(перевод отсутствует)</em></p>
+<div class="sl-heading-wrapper level-h3"><h3 id="sgcloading-screen-2">SGC|Loading Screen</h3><a class="sl-anchor-link" href="#sgcloading-screen-2"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «SGC|Loading Screen»</span></a></div>
+<p><a id="USGCAsyncAction_WaitLoadingScreenShown.WaitForLoadingScreenShown"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="wait-for-loading-screen-shown-перевод-отсутствует">Wait For Loading Screen Shown <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#wait-for-loading-screen-shown-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Wait For Loading Screen Shown (перевод отсутствует)»</span></a></div>
+<p>Waits until the current pending request is shown; when idle, waits for the next request. An already visible or fading screen succeeds on the next frame with its captured request context. Cancellation before showing, failure to create a screen, and an unavailable screen subsystem use On Not Shown. A dedicated server is Unavailable. No timeout is applied. Showing does not mean loading has completed. <em>(перевод отсутствует)</em></p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">static USGCAsyncAction_WaitLoadingScreenShown* WaitForLoadingScreenShown()</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="static USGCAsyncAction_WaitLoadingScreenShown* WaitForLoadingScreenShown()"><div></div></button></div></figure></div>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Направление</th>
+<th>По умолчанию</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code dir="auto">ReturnValue</code></td>
+<td><code dir="auto">USGCAsyncAction_WaitLoadingScreenShown*</code></td>
+<td>output</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<div class="sl-heading-wrapper level-h3"><h3 id="выходы-async-действия-2">Выходы async-действия</h3><a class="sl-anchor-link" href="#выходы-async-действия-2"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Выходы async-действия»</span></a></div>
+<p><a id="USGCAsyncAction_WaitLoadingScreenShown.OnShown"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="on-shown-перевод-отсутствует">On Shown <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#on-shown-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «On Shown (перевод отсутствует)»</span></a></div>
+<p>The screen reached Visible. Context identifies the request, even if it has since finished. <em>(перевод отсутствует)</em></p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">FSGCLoadingScreenShownAsyncDelegate OnShown</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="FSGCLoadingScreenShownAsyncDelegate OnShown"><div></div></button></div></figure></div>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Направление</th>
+<th>По умолчанию</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code dir="auto">Context</code></td>
+<td><code dir="auto">FSGCLoadingScreenContext</code></td>
+<td>output</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="USGCAsyncAction_WaitLoadingScreenShown.OnNotShown"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="on-not-shown-перевод-отсутствует">On Not Shown <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#on-not-shown-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «On Not Shown (перевод отсутствует)»</span></a></div>
+<p>The request was cancelled before showing, failed to show, or has no available screen subsystem. <em>(перевод отсутствует)</em></p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">FSGCLoadingScreenNotShownAsyncDelegate OnNotShown</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="FSGCLoadingScreenNotShownAsyncDelegate OnNotShown"><div></div></button></div></figure></div>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Направление</th>
+<th>По умолчанию</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code dir="auto">Outcome</code></td>
+<td><code dir="auto">ESGCLoadingScreenShownOutcome</code></td>
+<td>output</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="USGCAsyncAction_WatchPSOPrecompile"></a></p>
+<div class="sl-heading-wrapper level-h2"><h2 id="usgcasync-action-watch-psoprecompile-перевод-отсутствует">USGCAsync Action Watch PSOPrecompile <em>(перевод отсутствует)</em></h2><a class="sl-anchor-link" href="#usgcasync-action-watch-psoprecompile-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «USGCAsync Action Watch PSOPrecompile (перевод отсутствует)»</span></a></div>
+<p>Следит за предкомпиляцией PSO (графические конвейеры под эту видеокарту и драйвер; долго при первом запуске сборки). Плагин не держит из-за неё игроков: решает ваша игра, например показывает уведомление или предупреждает перед «Новой игрой».</p>
+<div class="sl-heading-wrapper level-h3"><h3 id="sgcloading-screenpso">SGC|Loading Screen|PSO</h3><a class="sl-anchor-link" href="#sgcloading-screenpso"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «SGC|Loading Screen|PSO»</span></a></div>
+<p><a id="USGCAsyncAction_WatchPSOPrecompile.WatchPSOPrecompile"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="watch-pso-precompile-перевод-отсутствует">Watch PSO Precompile <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#watch-pso-precompile-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Watch PSO Precompile (перевод отсутствует)»</span></a></div>
+<p>On Started: идёт предкомпиляция (Total — сколько PSO оставалось, когда наблюдение началось). On Progress: Remaining и Progress (0..1), не чаще 10 раз в секунду. On Finished: предкомпилировать больше нечего (Seconds — сколько длилось наблюдение). Срабатывает при первой проверке (0,1 с), если сейчас ничего не идёт.</p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">static USGCAsyncAction_WatchPSOPrecompile* WatchPSOPrecompile()</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="static USGCAsyncAction_WatchPSOPrecompile* WatchPSOPrecompile()"><div></div></button></div></figure></div>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Направление</th>
+<th>По умолчанию</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code dir="auto">ReturnValue</code></td>
+<td><code dir="auto">USGCAsyncAction_WatchPSOPrecompile*</code></td>
+<td>output</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<div class="sl-heading-wrapper level-h3"><h3 id="выходы-async-действия-3">Выходы async-действия</h3><a class="sl-anchor-link" href="#выходы-async-действия-3"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Выходы async-действия»</span></a></div>
+<p><a id="USGCAsyncAction_WatchPSOPrecompile.OnStarted"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="on-started-перевод-отсутствует">On Started <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#on-started-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «On Started (перевод отсутствует)»</span></a></div>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">FSGCPSOPrecompileStartedDelegate OnStarted</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="FSGCPSOPrecompileStartedDelegate OnStarted"><div></div></button></div></figure></div>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Направление</th>
+<th>По умолчанию</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code dir="auto">Total</code></td>
+<td><code dir="auto">int32</code></td>
+<td>output</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="USGCAsyncAction_WatchPSOPrecompile.OnProgress"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="on-progress-перевод-отсутствует">On Progress <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#on-progress-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «On Progress (перевод отсутствует)»</span></a></div>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">FSGCPSOPrecompileProgressDelegate OnProgress</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="FSGCPSOPrecompileProgressDelegate OnProgress"><div></div></button></div></figure></div>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Направление</th>
+<th>По умолчанию</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code dir="auto">Remaining</code></td>
+<td><code dir="auto">int32</code></td>
+<td>output</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code dir="auto">Progress</code></td>
+<td><code dir="auto">float</code></td>
+<td>output</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="USGCAsyncAction_WatchPSOPrecompile.OnFinished"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="on-finished-перевод-отсутствует">On Finished <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#on-finished-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «On Finished (перевод отсутствует)»</span></a></div>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">FSGCPSOPrecompileFinishedDelegate OnFinished</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="FSGCPSOPrecompileFinishedDelegate OnFinished"><div></div></button></div></figure></div>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Направление</th>
+<th>По умолчанию</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code dir="auto">Seconds</code></td>
+<td><code dir="auto">float</code></td>
+<td>output</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="USGCLoadingScreenBlueprintLibrary"></a></p>
+<div class="sl-heading-wrapper level-h2"><h2 id="usgcloading-screen-blueprint-library-перевод-отсутствует">USGCLoading Screen Blueprint Library <em>(перевод отсутствует)</em></h2><a class="sl-anchor-link" href="#usgcloading-screen-blueprint-library-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «USGCLoading Screen Blueprint Library (перевод отсутствует)»</span></a></div>
+<p>Blueprint-доступ к экрану загрузки игрового экземпляра.</p>
+<div class="sl-heading-wrapper level-h3"><h3 id="sgcloading-screen-3">SGC|Loading Screen</h3><a class="sl-anchor-link" href="#sgcloading-screen-3"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «SGC|Loading Screen»</span></a></div>
+<p><a id="USGCLoadingScreenBlueprintLibrary.PushLoadingScreen"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="push-loading-screen-перевод-отсутствует">Push Loading Screen <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#push-loading-screen-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Push Loading Screen (перевод отсутствует)»</span></a></div>
+<p>Requests the loading screen for the current game instance. Available in every mode. A visible request is kept; an ordinary dismiss fade is cancelled. A fade forced by Max Visible Secs cannot be cancelled; request a new screen after it finishes. <em>(перевод отсутствует)</em></p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">static void PushLoadingScreen()</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="static void PushLoadingScreen()"><div></div></button></div></figure></div>
+<p><a id="USGCLoadingScreenBlueprintLibrary.DismissLoadingScreen"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="dismiss-loading-screen-перевод-отсутствует">Dismiss Loading Screen <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#dismiss-loading-screen-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Dismiss Loading Screen (перевод отсутствует)»</span></a></div>
+<p>Cancels a pending request, or fades out the visible screen even if loading or holds remain. With Continue On Input enabled, releases the manual gate instead: closing waits until loading reaches 100% and a new key, mouse button, gamepad button or touch confirms. Max Visible Secs can force closing. Available in every mode. Wait For Loading Screen Dismissed fires after the screen is removed. <em>(перевод отсутствует)</em></p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">static void DismissLoadingScreen()</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="static void DismissLoadingScreen()"><div></div></button></div></figure></div>
+<p><a id="USGCLoadingScreenBlueprintLibrary.GetLoadingScreenEvents"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="get-loading-screen-events-перевод-отсутствует">Get Loading Screen Events <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#get-loading-screen-events-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Get Loading Screen Events (перевод отсутствует)»</span></a></div>
+<p>Returns the Game Instance event source for shown, dismiss-started and finished notifications. Null when screens are unavailable. <em>(перевод отсутствует)</em></p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">static USGCLoadingScreenEvents* GetLoadingScreenEvents()</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="static USGCLoadingScreenEvents* GetLoadingScreenEvents()"><div></div></button></div></figure></div>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Направление</th>
+<th>По умолчанию</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code dir="auto">ReturnValue</code></td>
+<td><code dir="auto">USGCLoadingScreenEvents*</code></td>
+<td>output</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="USGCLoadingScreenBlueprintLibrary.GetLoadingState"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="get-loading-state-перевод-отсутствует">Get Loading State <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#get-loading-state-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Get Loading State (перевод отсутствует)»</span></a></div>
+<p>Returns Unavailable without a screen subsystem (including a dedicated server), otherwise its current lifecycle state. <em>(перевод отсутствует)</em></p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">static ESGCLoadingScreenState GetLoadingState()</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="static ESGCLoadingScreenState GetLoadingState()"><div></div></button></div></figure></div>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Направление</th>
+<th>По умолчанию</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code dir="auto">ReturnValue</code></td>
+<td><code dir="auto">ESGCLoadingScreenState</code></td>
+<td>output</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="USGCLoadingScreenBlueprintLibrary.SetLoadingScreenContinueOnInput"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="set-loading-screen-continue-on-input-перевод-отсутствует">Set Loading Screen Continue On Input <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#set-loading-screen-continue-on-input-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Set Loading Screen Continue On Input (перевод отсутствует)»</span></a></div>
+<p>Changes Continue On Input for this Game Instance without writing Project Settings. Applies to the visible screen and future requests. Disabling releases its continue gate immediately. When enabled, closing waits for new discrete input after 100% progress; in manual modes Dismiss must release the manual gate too. Repeats, analog input, console/PIE exceptions and MoviePlayer input do not confirm. Each network machine waits independently. Max Visible Secs still closes the screen. <em>(перевод отсутствует)</em></p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">static void SetLoadingScreenContinueOnInput(bool bEnabled)</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="static void SetLoadingScreenContinueOnInput(bool bEnabled)"><div></div></button></div></figure></div>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Направление</th>
+<th>По умолчанию</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code dir="auto">bEnabled</code></td>
+<td><code dir="auto">bool</code></td>
+<td>input</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="USGCLoadingScreenBlueprintLibrary.GetLoadingProgress"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="get-loading-progress-перевод-отсутствует">Get Loading Progress <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#get-loading-progress-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Get Loading Progress (перевод отсутствует)»</span></a></div>
+<p>Returns the displayed loading progress from 0 to 1. Resets for each new load cycle. Returns 0 without a screen. <em>(перевод отсутствует)</em></p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">static float GetLoadingProgress()</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="static float GetLoadingProgress()"><div></div></button></div></figure></div>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Направление</th>
+<th>По умолчанию</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code dir="auto">ReturnValue</code></td>
+<td><code dir="auto">float</code></td>
+<td>output</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="USGCLoadingScreenBlueprintLibrary.IsLoadingScreenVisible"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="is-loading-screen-visible-перевод-отсутствует">Is Loading Screen Visible <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#is-loading-screen-visible-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Is Loading Screen Visible (перевод отсутствует)»</span></a></div>
+<p>Возвращает, прикреплён ли сейчас экран загрузки к viewport.</p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">static bool IsLoadingScreenVisible()</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="static bool IsLoadingScreenVisible()"><div></div></button></div></figure></div>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Направление</th>
+<th>По умолчанию</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code dir="auto">ReturnValue</code></td>
+<td><code dir="auto">bool</code></td>
+<td>output</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="USGCLoadingScreenBlueprintLibrary.GetActiveLoadingScreenWidget"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="get-active-loading-screen-widget-перевод-отсутствует">Get Active Loading Screen Widget <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#get-active-loading-screen-widget-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Get Active Loading Screen Widget (перевод отсутствует)»</span></a></div>
+<p>Возвращает активный виджет экрана загрузки или null, если экран сейчас не показан.</p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">static USGCLoadingScreenWidget* GetActiveLoadingScreenWidget()</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="static USGCLoadingScreenWidget* GetActiveLoadingScreenWidget()"><div></div></button></div></figure></div>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Направление</th>
+<th>По умолчанию</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code dir="auto">ReturnValue</code></td>
+<td><code dir="auto">USGCLoadingScreenWidget*</code></td>
+<td>output</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="USGCLoadingScreenBlueprintLibrary.SetCustomText1"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="set-custom-text-1-перевод-отсутствует">Set Custom Text 1 <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#set-custom-text-1-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Set Custom Text 1 (перевод отсутствует)»</span></a></div>
+<p>Вызывает Set Custom Text 1 у активного экрана загрузки. Ничего не делает, если экран не показан.</p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">static void SetCustomText1(const FText&amp; CustomText)</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="static void SetCustomText1(const FText&amp; CustomText)"><div></div></button></div></figure></div>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Направление</th>
+<th>По умолчанию</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code dir="auto">CustomText</code></td>
+<td><code dir="auto">const FText&amp;amp;</code></td>
+<td>input</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>Устарело
+Замена — Use Add Loading Tips and the SGC Loading Tip widget. Still works.</p>
+<p><a id="USGCLoadingScreenBlueprintLibrary.SetCustomText2"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="set-custom-text-2-перевод-отсутствует">Set Custom Text 2 <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#set-custom-text-2-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Set Custom Text 2 (перевод отсутствует)»</span></a></div>
+<p>Вызывает Set Custom Text 2 у активного экрана загрузки. Ничего не делает, если экран не показан.</p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">static void SetCustomText2(const FText&amp; CustomText)</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="static void SetCustomText2(const FText&amp; CustomText)"><div></div></button></div></figure></div>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Направление</th>
+<th>По умолчанию</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code dir="auto">CustomText</code></td>
+<td><code dir="auto">const FText&amp;amp;</code></td>
+<td>input</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>Устарело
+Замена — Use Add Loading Tips and the SGC Loading Tip widget. Still works.</p>
+<p><a id="USGCLoadingScreenBlueprintLibrary.SetCustomText3"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="set-custom-text-3-перевод-отсутствует">Set Custom Text 3 <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#set-custom-text-3-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Set Custom Text 3 (перевод отсутствует)»</span></a></div>
+<p>Вызывает Set Custom Text 3 у активного экрана загрузки. Ничего не делает, если экран не показан.</p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">static void SetCustomText3(const FText&amp; CustomText)</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="static void SetCustomText3(const FText&amp; CustomText)"><div></div></button></div></figure></div>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Направление</th>
+<th>По умолчанию</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code dir="auto">CustomText</code></td>
+<td><code dir="auto">const FText&amp;amp;</code></td>
+<td>input</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>Устарело
+Замена — Use Add Loading Tips and the SGC Loading Tip widget. Still works.</p>
+<p><a id="USGCLoadingScreenBlueprintLibrary.SetCustomProgress"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="set-custom-progress-перевод-отсутствует">Set Custom Progress <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#set-custom-progress-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Set Custom Progress (перевод отсутствует)»</span></a></div>
+<p>Вызывает Set Custom Progress у активного экрана загрузки. Ничего не делает, если экран не показан.</p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">static void SetCustomProgress(float Progress)</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="static void SetCustomProgress(float Progress)"><div></div></button></div></figure></div>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Направление</th>
+<th>По умолчанию</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code dir="auto">Progress</code></td>
+<td><code dir="auto">float</code></td>
+<td>input</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="USGCLoadingScreenBlueprintLibrary.NotifyCustom"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="notify-custom-перевод-отсутствует">Notify Custom <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#notify-custom-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Notify Custom (перевод отсутствует)»</span></a></div>
+<p>Вызывает Notify Custom у активного экрана загрузки. Не закрывает экран. Ничего не делает, если экран не показан.</p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">static void NotifyCustom()</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="static void NotifyCustom()"><div></div></button></div></figure></div>
+<p><a id="USGCLoadingScreenBlueprintLibrary.SetCustomImage"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="set-custom-image-перевод-отсутствует">Set Custom Image <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#set-custom-image-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Set Custom Image (перевод отсутствует)»</span></a></div>
+<p>Вызывает Set Custom Image у активного экрана загрузки. Ничего не делает, если экран не показан.</p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">static void SetCustomImage(UTexture2D* CustomImage)</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="static void SetCustomImage(UTexture2D* CustomImage)"><div></div></button></div></figure></div>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Направление</th>
+<th>По умолчанию</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code dir="auto">CustomImage</code></td>
+<td><code dir="auto">UTexture2D*</code></td>
+<td>input</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>Устарело
+Замена — Use Add Loading Backgrounds and the SGC Loading Background widget. Still works.</p>
+<div class="sl-heading-wrapper level-h3"><h3 id="sgcloading-screenaccessibility">SGC|Loading Screen|Accessibility</h3><a class="sl-anchor-link" href="#sgcloading-screenaccessibility"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «SGC|Loading Screen|Accessibility»</span></a></div>
+<p><a id="USGCLoadingScreenBlueprintLibrary.SetLoadingScreenReduceMotion"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="set-loading-screen-reduce-motion-перевод-отсутствует">Set Loading Screen Reduce Motion <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#set-loading-screen-reduce-motion-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Set Loading Screen Reduce Motion (перевод отсутствует)»</span></a></div>
+<p>Saves the player’s motion preference in GameUserSettings.ini, overriding Project Settings. Applies immediately to all current loading screens on this machine; startup uses it from the next launch. Widget animations and movies are unaffected. <em>(перевод отсутствует)</em></p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">static void SetLoadingScreenReduceMotion(bool bReduceMotion)</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="static void SetLoadingScreenReduceMotion(bool bReduceMotion)"><div></div></button></div></figure></div>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Направление</th>
+<th>По умолчанию</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code dir="auto">bReduceMotion</code></td>
+<td><code dir="auto">bool</code></td>
+<td>input</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="USGCLoadingScreenBlueprintLibrary.GetLoadingScreenReduceMotion"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="get-loading-screen-reduce-motion-перевод-отсутствует">Get Loading Screen Reduce Motion <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#get-loading-screen-reduce-motion-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Get Loading Screen Reduce Motion (перевод отсутствует)»</span></a></div>
+<p>Returns the saved player preference, or the project default when no player choice has been saved. <em>(перевод отсутствует)</em></p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">static bool GetLoadingScreenReduceMotion()</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="static bool GetLoadingScreenReduceMotion()"><div></div></button></div></figure></div>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Направление</th>
+<th>По умолчанию</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code dir="auto">ReturnValue</code></td>
+<td><code dir="auto">bool</code></td>
+<td>output</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<div class="sl-heading-wrapper level-h3"><h3 id="sgcloading-screenholds">SGC|Loading Screen|Holds</h3><a class="sl-anchor-link" href="#sgcloading-screenholds"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «SGC|Loading Screen|Holds»</span></a></div>
+<p><a id="USGCLoadingScreenBlueprintLibrary.SetLoadingScreenHold"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="set-loading-screen-hold-перевод-отсутствует">Set Loading Screen Hold <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#set-loading-screen-hold-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Set Loading Screen Hold (перевод отсутствует)»</span></a></div>
+<p>Держит экран загрузки по причине вашей игры (например, LoadingScreen.Hold.Quests), с необязательным прогрессом (0..1, -1 — неизвестен) и строкой статуса. Повторный вызов с той же причиной обновляет прогресс и текст. В режимах с автопоказом ещё и показывает экран. Удержанием владеет вызвавший объект: если он уничтожен, удержание снимается (с предупреждением в логе).</p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">static void SetLoadingScreenHold(FGameplayTag Reason, float Progress = -1.0f, const FText&amp; StatusText = FText::GetEmpty())</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="static void SetLoadingScreenHold(FGameplayTag Reason, float Progress = -1.0f, const FText&amp; StatusText = FText::GetEmpty())"><div></div></button></div></figure></div>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Направление</th>
+<th>По умолчанию</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code dir="auto">Reason</code></td>
+<td><code dir="auto">FGameplayTag</code></td>
+<td>input</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code dir="auto">Progress</code></td>
+<td><code dir="auto">float</code></td>
+<td>input</td>
+<td>-1</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code dir="auto">StatusText</code></td>
+<td><code dir="auto">const FText&amp;amp;</code></td>
+<td>input</td>
+<td>пусто</td>
+<td>Расширенный пин</td>
+</tr>
+</tbody>
+</table>
+<p>Расширенная настройка — StatusText</p>
+<p><a id="USGCLoadingScreenBlueprintLibrary.ReleaseLoadingScreenHold"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="release-loading-screen-hold-перевод-отсутствует">Release Loading Screen Hold <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#release-loading-screen-hold-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Release Loading Screen Hold (перевод отсутствует)»</span></a></div>
+<p>Releases a hold only when called by the object that set it. <em>(перевод отсутствует)</em></p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">static void ReleaseLoadingScreenHold(FGameplayTag Reason)</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="static void ReleaseLoadingScreenHold(FGameplayTag Reason)"><div></div></button></div></figure></div>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Направление</th>
+<th>По умолчанию</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code dir="auto">Reason</code></td>
+<td><code dir="auto">FGameplayTag</code></td>
+<td>input</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="USGCLoadingScreenBlueprintLibrary.IsLoadingScreenHeld"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="is-loading-screen-held-перевод-отсутствует">Is Loading Screen Held <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#is-loading-screen-held-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Is Loading Screen Held (перевод отсутствует)»</span></a></div>
+<p>Есть ли удержание с этой причиной.</p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">static bool IsLoadingScreenHeld(FGameplayTag Reason)</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="static bool IsLoadingScreenHeld(FGameplayTag Reason)"><div></div></button></div></figure></div>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Направление</th>
+<th>По умолчанию</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code dir="auto">Reason</code></td>
+<td><code dir="auto">FGameplayTag</code></td>
+<td>input</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code dir="auto">ReturnValue</code></td>
+<td><code dir="auto">bool</code></td>
+<td>output</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="USGCLoadingScreenBlueprintLibrary.GetLoadingScreenHolds"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="get-loading-screen-holds-перевод-отсутствует">Get Loading Screen Holds <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#get-loading-screen-holds-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Get Loading Screen Holds (перевод отсутствует)»</span></a></div>
+<p>Все причины, которые держат экран сейчас, включая причины самого плагина (переезд, ассеты, шейдеры, игроки…).</p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">static TArray&lt;FSGCLoadingHold&gt; GetLoadingScreenHolds()</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="static TArray<FSGCLoadingHold> GetLoadingScreenHolds()"><div></div></button></div></figure></div>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Направление</th>
+<th>По умолчанию</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code dir="auto">ReturnValue</code></td>
+<td><code dir="auto">TArray&amp;lt;FSGCLoadingHold&amp;gt;</code></td>
+<td>output</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<div class="sl-heading-wrapper level-h3"><h3 id="sgcloading-screenslides">SGC|Loading Screen|Slides</h3><a class="sl-anchor-link" href="#sgcloading-screenslides"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «SGC|Loading Screen|Slides»</span></a></div>
+<p><a id="USGCLoadingScreenBlueprintLibrary.AddLoadingTips"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="add-loading-tips-перевод-отсутствует">Add Loading Tips <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#add-loading-tips-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Add Loading Tips (перевод отсутствует)»</span></a></div>
+<p>Adds tips for SGC Loading Tip. Each tip is shown once per round, in a new order each round; the round continues after a game restart. A tip already in the list is not added twice. Selected Replace Common content sets hide these tips for their destination maps. <em>(перевод отсутствует)</em></p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">static void AddLoadingTips(const TArray&lt;FText&gt;&amp; Tips)</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="static void AddLoadingTips(const TArray<FText>&amp; Tips)"><div></div></button></div></figure></div>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Направление</th>
+<th>По умолчанию</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code dir="auto">Tips</code></td>
+<td><code dir="auto">const TArray&amp;lt;FText&amp;gt;&amp;amp;</code></td>
+<td>input</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="USGCLoadingScreenBlueprintLibrary.RemoveLoadingTips"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="remove-loading-tips-перевод-отсутствует">Remove Loading Tips <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#remove-loading-tips-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Remove Loading Tips (перевод отсутствует)»</span></a></div>
+<p>Removes tips added by Add Loading Tips. Matching tips from content sets remain. A removed tip shown now is replaced at once. <em>(перевод отсутствует)</em></p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">static void RemoveLoadingTips(const TArray&lt;FText&gt;&amp; Tips)</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="static void RemoveLoadingTips(const TArray<FText>&amp; Tips)"><div></div></button></div></figure></div>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Направление</th>
+<th>По умолчанию</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code dir="auto">Tips</code></td>
+<td><code dir="auto">const TArray&amp;lt;FText&amp;gt;&amp;amp;</code></td>
+<td>input</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="USGCLoadingScreenBlueprintLibrary.ClearLoadingTips"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="clear-loading-tips-перевод-отсутствует">Clear Loading Tips <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#clear-loading-tips-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Clear Loading Tips (перевод отсутствует)»</span></a></div>
+<p>Removes all tips added by Add Loading Tips. Tips from content sets remain. <em>(перевод отсутствует)</em></p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">static void ClearLoadingTips()</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="static void ClearLoadingTips()"><div></div></button></div></figure></div>
+<p><a id="USGCLoadingScreenBlueprintLibrary.AddLoadingBackgrounds"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="add-loading-backgrounds-перевод-отсутствует">Add Loading Backgrounds <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#add-loading-backgrounds-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Add Loading Backgrounds (перевод отсутствует)»</span></a></div>
+<p>Adds backgrounds for SGC Loading Background: an image and an optional text of its own. Images load in the background only while the loading screen shows them; one that fails to load is removed. Each background is shown once per round, in a new order each round; the round continues after a game restart. Selected Replace Common content sets hide these backgrounds for their destination maps. <em>(перевод отсутствует)</em></p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">static void AddLoadingBackgrounds(const TArray&lt;FSGCLoadingBackground&gt;&amp; Backgrounds)</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="static void AddLoadingBackgrounds(const TArray<FSGCLoadingBackground>&amp; Backgrounds)"><div></div></button></div></figure></div>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Направление</th>
+<th>По умолчанию</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code dir="auto">Backgrounds</code></td>
+<td><code dir="auto">const TArray&amp;lt;FSGCLoadingBackground&amp;gt;&amp;amp;</code></td>
+<td>input</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="USGCLoadingScreenBlueprintLibrary.RemoveLoadingBackgrounds"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="remove-loading-backgrounds-перевод-отсутствует">Remove Loading Backgrounds <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#remove-loading-backgrounds-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Remove Loading Backgrounds (перевод отсутствует)»</span></a></div>
+<p>Removes backgrounds added by Add Loading Backgrounds. Matching backgrounds from content sets remain. A removed background shown now is replaced at once. <em>(перевод отсутствует)</em></p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">static void RemoveLoadingBackgrounds(const TArray&lt;FSGCLoadingBackground&gt;&amp; Backgrounds)</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="static void RemoveLoadingBackgrounds(const TArray<FSGCLoadingBackground>&amp; Backgrounds)"><div></div></button></div></figure></div>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Направление</th>
+<th>По умолчанию</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code dir="auto">Backgrounds</code></td>
+<td><code dir="auto">const TArray&amp;lt;FSGCLoadingBackground&amp;gt;&amp;amp;</code></td>
+<td>input</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="USGCLoadingScreenBlueprintLibrary.ClearLoadingBackgrounds"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="clear-loading-backgrounds-перевод-отсутствует">Clear Loading Backgrounds <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#clear-loading-backgrounds-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Clear Loading Backgrounds (перевод отсутствует)»</span></a></div>
+<p>Removes all backgrounds added by Add Loading Backgrounds. Backgrounds from content sets remain. <em>(перевод отсутствует)</em></p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">static void ClearLoadingBackgrounds()</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="static void ClearLoadingBackgrounds()"><div></div></button></div></figure></div>
+<div class="sl-heading-wrapper level-h3"><h3 id="sgcloading-screenpso-1">SGC|Loading Screen|PSO</h3><a class="sl-anchor-link" href="#sgcloading-screenpso-1"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «SGC|Loading Screen|PSO»</span></a></div>
+<p><a id="USGCLoadingScreenBlueprintLibrary.GetPSOPrecompileStatus"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="get-pso-precompile-status-перевод-отсутствует">Get PSO Precompile Status <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#get-pso-precompile-status-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Get PSO Precompile Status (перевод отсутствует)»</span></a></div>
+<p>Идёт ли сейчас предкомпиляция PSO (графические конвейеры под эту видеокарту и драйвер) и сколько осталось. Например, чтобы перед «Новой игрой» предупредить игрока, что первые минуты возможны подтормаживания.</p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">static bool GetPSOPrecompileStatus(int32&amp; Remaining)</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="static bool GetPSOPrecompileStatus(int32&amp; Remaining)"><div></div></button></div></figure></div>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Направление</th>
+<th>По умолчанию</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code dir="auto">Remaining</code></td>
+<td><code dir="auto">int32&amp;amp;</code></td>
+<td>output</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code dir="auto">ReturnValue</code></td>
+<td><code dir="auto">bool</code></td>
+<td>output</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<div class="sl-heading-wrapper level-h3"><h3 id="sgcloading-screenmetrics-overlay">SGC|Loading Screen|Metrics Overlay</h3><a class="sl-anchor-link" href="#sgcloading-screenmetrics-overlay"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «SGC|Loading Screen|Metrics Overlay»</span></a></div>
+<p><a id="USGCLoadingScreenBlueprintLibrary.SetMetricsOverlayEnabled"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="set-metrics-overlay-enabled-перевод-отсутствует">Set Metrics Overlay Enabled <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#set-metrics-overlay-enabled-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Set Metrics Overlay Enabled (перевод отсутствует)»</span></a></div>
+<p>Показывает или скрывает оверлей метрик. Не записывает Project Settings.</p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">static void SetMetricsOverlayEnabled(bool bEnabled)</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="static void SetMetricsOverlayEnabled(bool bEnabled)"><div></div></button></div></figure></div>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Направление</th>
+<th>По умолчанию</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code dir="auto">bEnabled</code></td>
+<td><code dir="auto">bool</code></td>
+<td>input</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="USGCLoadingScreenBlueprintLibrary.SetMetricsOverlayMode"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="set-metrics-overlay-mode-перевод-отсутствует">Set Metrics Overlay Mode <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#set-metrics-overlay-mode-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Set Metrics Overlay Mode (перевод отсутствует)»</span></a></div>
+<p>Выбирает FPS, Memory или оба. Не записывает Project Settings.</p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">static void SetMetricsOverlayMode(ESGCDebugOverlayMode Mode)</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="static void SetMetricsOverlayMode(ESGCDebugOverlayMode Mode)"><div></div></button></div></figure></div>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Направление</th>
+<th>По умолчанию</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code dir="auto">Mode</code></td>
+<td><code dir="auto">ESGCDebugOverlayMode</code></td>
+<td>input</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="USGCLoadingScreenBlueprintLibrary.SetMetricsOverlayCorner"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="set-metrics-overlay-corner-перевод-отсутствует">Set Metrics Overlay Corner <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#set-metrics-overlay-corner-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Set Metrics Overlay Corner (перевод отсутствует)»</span></a></div>
+<p>Перемещает оверлей в угол экрана. Не записывает Project Settings.</p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">static void SetMetricsOverlayCorner(ESGCDebugOverlayCorner Corner)</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="static void SetMetricsOverlayCorner(ESGCDebugOverlayCorner Corner)"><div></div></button></div></figure></div>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Направление</th>
+<th>По умолчанию</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code dir="auto">Corner</code></td>
+<td><code dir="auto">ESGCDebugOverlayCorner</code></td>
+<td>input</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="USGCLoadingScreenBlueprintLibrary.SetMetricsOverlayColor"></a></p>
+<div class="sl-heading-wrapper level-h4"><h4 id="set-metrics-overlay-color-перевод-отсутствует">Set Metrics Overlay Color <em>(перевод отсутствует)</em></h4><a class="sl-anchor-link" href="#set-metrics-overlay-color-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Set Metrics Overlay Color (перевод отсутствует)»</span></a></div>
+<p>Задаёт цвет текста оверлея. Не записывает Project Settings.</p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">static void SetMetricsOverlayColor(FLinearColor Color)</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="static void SetMetricsOverlayColor(FLinearColor Color)"><div></div></button></div></figure></div>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Направление</th>
+<th>По умолчанию</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code dir="auto">Color</code></td>
+<td><code dir="auto">FLinearColor</code></td>
+<td>input</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="FSGCLoadingBackground"></a></p>
+<div class="sl-heading-wrapper level-h2"><h2 id="sgc-loading-background-перевод-отсутствует">SGC Loading Background <em>(перевод отсутствует)</em></h2><a class="sl-anchor-link" href="#sgc-loading-background-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «SGC Loading Background (перевод отсутствует)»</span></a></div>
+<p>Фон экрана загрузки. Картинка загружается в фоне, только когда она нужна экрану.</p>
+<div class="sl-heading-wrapper level-h3"><h3 id="background">Background</h3><a class="sl-anchor-link" href="#background"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Background»</span></a></div>
+<table>
+<thead>
+<tr>
+<th>Имя в редакторе</th>
+<th>Описание</th>
+<th>Значение по умолчанию</th>
+<th>Ограничения</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="FSGCLoadingBackground.Image"></a> Image <em>(перевод отсутствует)</em><br><code dir="auto">Image</code></td>
+<td>Картинка слайда. Лучше в группе текстур UI без мипов.</td>
+<td>Не задано</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="FSGCLoadingBackground.Tip"></a> Tip <em>(перевод отсутствует)</em><br><code dir="auto">Tip</code></td>
+<td>Текст, который SGC Loading Tip покажет с этой картинкой. Пусто — следующая подсказка из Add Loading Tips.</td>
+<td>пусто</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="ESGCLoadingContentMode"></a></p>
+<div class="sl-heading-wrapper level-h2"><h2 id="esgcloading-content-mode-перевод-отсутствует">ESGCLoading Content Mode <em>(перевод отсутствует)</em></h2><a class="sl-anchor-link" href="#esgcloading-content-mode-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «ESGCLoading Content Mode (перевод отсутствует)»</span></a></div>
+<p>How a selected map-specific set combines with common content. <em>(перевод отсутствует)</em></p>
+<table>
+<thead>
+<tr>
+<th>Значение</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="ESGCLoadingContentMode.AddToCommon"></a> Add to Common <em>(перевод отсутствует)</em></td>
+<td>Include common sets and content added through Add Loading Tips and Add Loading Backgrounds. <em>(перевод отсутствует)</em></td>
+</tr>
+<tr>
+<td><a id="ESGCLoadingContentMode.ReplaceCommon"></a> Replace Common <em>(перевод отсутствует)</em></td>
+<td>Exclude common sets and content added through Add Loading Tips and Add Loading Backgrounds. <em>(перевод отсутствует)</em></td>
+</tr>
+</tbody>
+</table>
+<p><a id="FSGCLoadingHold"></a></p>
+<div class="sl-heading-wrapper level-h2"><h2 id="fsgcloading-hold-перевод-отсутствует">FSGCLoading Hold <em>(перевод отсутствует)</em></h2><a class="sl-anchor-link" href="#fsgcloading-hold-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «FSGCLoading Hold (перевод отсутствует)»</span></a></div>
+<p>Одна причина, которая держит экран загрузки.</p>
+<div class="sl-heading-wrapper level-h3"><h3 id="sgcloading-screen-4">SGC|Loading Screen</h3><a class="sl-anchor-link" href="#sgcloading-screen-4"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «SGC|Loading Screen»</span></a></div>
+<table>
+<thead>
+<tr>
+<th>Имя в редакторе</th>
+<th>Описание</th>
+<th>Значение по умолчанию</th>
+<th>Ограничения</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="FSGCLoadingHold.Reason"></a> Reason <em>(перевод отсутствует)</em><br><code dir="auto">Reason</code></td>
+<td>Причина удержания (LoadingScreen.Hold.*).</td>
+<td>Пустой тег Gameplay</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="FSGCLoadingHold.Progress"></a> Progress <em>(перевод отсутствует)</em><br><code dir="auto">Progress</code></td>
+<td>0..1 или отрицательное значение, если прогресс неизвестен.</td>
+<td>-1</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="FSGCLoadingHold.StatusText"></a> Status Text <em>(перевод отсутствует)</em><br><code dir="auto">StatusText</code></td>
+<td>Строка статуса этого удержания. Пусто — у удержания нет строки.</td>
+<td>пусто</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="FSGCLoadingHold.HeldSecs"></a> Held Secs <em>(перевод отсутствует)</em><br><code dir="auto">HeldSecs</code></td>
+<td>Секунды с момента постановки удержания.</td>
+<td>0</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="ESGCLoadingScreenMode"></a></p>
+<div class="sl-heading-wrapper level-h2"><h2 id="esgcloading-screen-mode-перевод-отсутствует">ESGCLoading Screen Mode <em>(перевод отсутствует)</em></h2><a class="sl-anchor-link" href="#esgcloading-screen-mode-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «ESGCLoading Screen Mode (перевод отсутствует)»</span></a></div>
+<p>Когда экран загрузки показывается и закрывается.</p>
+<table>
+<thead>
+<tr>
+<th>Значение</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="ESGCLoadingScreenMode.AutoShowManualDismiss"></a> Auto Show, Manual Dismiss <em>(перевод отсутствует)</em></td>
+<td>Показывается сам при переезде, seamless travel, подключении к серверу и удержаниях игры. Закрывается только Dismiss Loading Screen.</td>
+</tr>
+<tr>
+<td><a id="ESGCLoadingScreenMode.Automatic"></a> Automatic <em>(перевод отсутствует)</em></td>
+<td>Показывается сам при переезде, seamless travel, подключении к серверу и удержаниях игры. Закрывается сам, когда удержаний не осталось.</td>
+</tr>
+<tr>
+<td><a id="ESGCLoadingScreenMode.Manual"></a> Manual <em>(перевод отсутствует)</em></td>
+<td>Показывается только Push Loading Screen. Закрывается только Dismiss Loading Screen.</td>
+</tr>
+<tr>
+<td><a id="ESGCLoadingScreenMode.ManualShowAutoDismiss"></a> Manual Show, Auto Dismiss <em>(перевод отсутствует)</em></td>
+<td>Показывается только Push Loading Screen. Закрывается сам, когда удержаний не осталось.</td>
+</tr>
+</tbody>
+</table>
+<p><a id="ESGCDebugOverlayCorner"></a></p>
+<div class="sl-heading-wrapper level-h2"><h2 id="esgcdebug-overlay-corner-перевод-отсутствует">ESGCDebug Overlay Corner <em>(перевод отсутствует)</em></h2><a class="sl-anchor-link" href="#esgcdebug-overlay-corner-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «ESGCDebug Overlay Corner (перевод отсутствует)»</span></a></div>
+<table>
+<thead>
+<tr>
+<th>Значение</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="ESGCDebugOverlayCorner.TopLeft"></a> Top Left <em>(перевод отсутствует)</em></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="ESGCDebugOverlayCorner.TopRight"></a> Top Right <em>(перевод отсутствует)</em></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="ESGCDebugOverlayCorner.BottomLeft"></a> Bottom Left <em>(перевод отсутствует)</em></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="ESGCDebugOverlayCorner.BottomRight"></a> Bottom Right <em>(перевод отсутствует)</em></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="ESGCDebugOverlayMode"></a></p>
+<div class="sl-heading-wrapper level-h2"><h2 id="esgcdebug-overlay-mode-перевод-отсутствует">ESGCDebug Overlay Mode <em>(перевод отсутствует)</em></h2><a class="sl-anchor-link" href="#esgcdebug-overlay-mode-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «ESGCDebug Overlay Mode (перевод отсутствует)»</span></a></div>
+<table>
+<thead>
+<tr>
+<th>Значение</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="ESGCDebugOverlayMode.FPS"></a> FPS <em>(перевод отсутствует)</em></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="ESGCDebugOverlayMode.Memory"></a> Memory <em>(перевод отсутствует)</em></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="ESGCDebugOverlayMode.FPSAndMemory"></a> FPS and Memory <em>(перевод отсутствует)</em></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="ESGCLoadingScreenState"></a></p>
+<div class="sl-heading-wrapper level-h2"><h2 id="esgcloading-screen-state-перевод-отсутствует">ESGCLoading Screen State <em>(перевод отсутствует)</em></h2><a class="sl-anchor-link" href="#esgcloading-screen-state-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «ESGCLoading Screen State (перевод отсутствует)»</span></a></div>
+<p>Current phase of the game-instance loading screen. <em>(перевод отсутствует)</em></p>
+<table>
+<thead>
+<tr>
+<th>Значение</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="ESGCLoadingScreenState.Unavailable"></a> Unavailable <em>(перевод отсутствует)</em></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="ESGCLoadingScreenState.Idle"></a> Idle <em>(перевод отсутствует)</em></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="ESGCLoadingScreenState.Pending"></a> Pending <em>(перевод отсутствует)</em></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="ESGCLoadingScreenState.Visible"></a> Visible <em>(перевод отсутствует)</em></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="ESGCLoadingScreenState.FadingOut"></a> Fading Out <em>(перевод отсутствует)</em></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="ESGCLoadingScreenShowReason"></a></p>
+<div class="sl-heading-wrapper level-h2"><h2 id="esgcloading-screen-show-reason-перевод-отсутствует">ESGCLoading Screen Show Reason <em>(перевод отсутствует)</em></h2><a class="sl-anchor-link" href="#esgcloading-screen-show-reason-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «ESGCLoading Screen Show Reason (перевод отсутствует)»</span></a></div>
+<p>Origin of a loading screen request. <em>(перевод отсутствует)</em></p>
+<table>
+<thead>
+<tr>
+<th>Значение</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="ESGCLoadingScreenShowReason.None"></a> None <em>(перевод отсутствует)</em></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="ESGCLoadingScreenShowReason.Manual"></a> Manual <em>(перевод отсутствует)</em></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="ESGCLoadingScreenShowReason.Hold"></a> Hold <em>(перевод отсутствует)</em></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="ESGCLoadingScreenShowReason.MapTravel"></a> Map Travel <em>(перевод отсутствует)</em></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="ESGCLoadingScreenShowReason.SeamlessTravel"></a> Seamless Travel <em>(перевод отсутствует)</em></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="ESGCLoadingScreenShowReason.ClientTravel"></a> Client Travel <em>(перевод отсутствует)</em></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="ESGCLoadingScreenShowReason.ServerConnection"></a> Server Connection <em>(перевод отсутствует)</em></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="ESGCLoadingScreenOutcome"></a></p>
+<div class="sl-heading-wrapper level-h2"><h2 id="esgcloading-screen-outcome-перевод-отсутствует">ESGCLoading Screen Outcome <em>(перевод отсутствует)</em></h2><a class="sl-anchor-link" href="#esgcloading-screen-outcome-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «ESGCLoading Screen Outcome (перевод отсутствует)»</span></a></div>
+<p>Final result of a loading screen request. Ready means loading completed, not merely that the screen was shown. <em>(перевод отсутствует)</em></p>
+<table>
+<thead>
+<tr>
+<th>Значение</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="ESGCLoadingScreenOutcome.Ready"></a> Ready <em>(перевод отсутствует)</em></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="ESGCLoadingScreenOutcome.Cancelled"></a> Cancelled <em>(перевод отсутствует)</em></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="ESGCLoadingScreenOutcome.TimedOut"></a> Timed Out <em>(перевод отсутствует)</em></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="ESGCLoadingScreenOutcome.ShowFailed"></a> Show Failed <em>(перевод отсутствует)</em></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="ESGCLoadingScreenShownOutcome"></a></p>
+<div class="sl-heading-wrapper level-h2"><h2 id="esgcloading-screen-shown-outcome-перевод-отсутствует">ESGCLoading Screen Shown Outcome <em>(перевод отсутствует)</em></h2><a class="sl-anchor-link" href="#esgcloading-screen-shown-outcome-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «ESGCLoading Screen Shown Outcome (перевод отсутствует)»</span></a></div>
+<p>Result of waiting for a screen to appear; Unavailable includes a dedicated server, which has no screen. <em>(перевод отсутствует)</em></p>
+<table>
+<thead>
+<tr>
+<th>Значение</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="ESGCLoadingScreenShownOutcome.Cancelled"></a> Cancelled <em>(перевод отсутствует)</em></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="ESGCLoadingScreenShownOutcome.ShowFailed"></a> Show Failed <em>(перевод отсутствует)</em></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="ESGCLoadingScreenShownOutcome.Unavailable"></a> Unavailable <em>(перевод отсутствует)</em></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="FSGCLoadingScreenContext"></a></p>
+<div class="sl-heading-wrapper level-h2"><h2 id="fsgcloading-screen-context-перевод-отсутствует">FSGCLoading Screen Context <em>(перевод отсутствует)</em></h2><a class="sl-anchor-link" href="#fsgcloading-screen-context-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «FSGCLoading Screen Context (перевод отсутствует)»</span></a></div>
+<p>Immutable identity and origin of one loading screen request. <em>(перевод отсутствует)</em></p>
+<div class="sl-heading-wrapper level-h3"><h3 id="sgcloading-screen-5">SGC|Loading Screen</h3><a class="sl-anchor-link" href="#sgcloading-screen-5"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «SGC|Loading Screen»</span></a></div>
+<table>
+<thead>
+<tr>
+<th>Имя в редакторе</th>
+<th>Описание</th>
+<th>Значение по умолчанию</th>
+<th>Ограничения</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="FSGCLoadingScreenContext.RequestId"></a> Request Id <em>(перевод отсутствует)</em><br><code dir="auto">RequestId</code></td>
+<td>Identifies this request within its Game Instance. <em>(перевод отсутствует)</em></td>
+<td>0</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="FSGCLoadingScreenContext.Reason"></a> Reason <em>(перевод отсутствует)</em><br><code dir="auto">Reason</code></td>
+<td>What requested the loading screen. <em>(перевод отсутствует)</em></td>
+<td>None <em>(перевод отсутствует)</em></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="FSGCLoadingScreenContext.MapKey"></a> Map Key <em>(перевод отсутствует)</em><br><code dir="auto">MapKey</code></td>
+<td>Destination map path or name, or an empty string when no map is known. <em>(перевод отсутствует)</em></td>
+<td>пусто</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="FSGCLoadingScreenCompletion"></a></p>
+<div class="sl-heading-wrapper level-h2"><h2 id="fsgcloading-screen-completion-перевод-отсутствует">FSGCLoading Screen Completion <em>(перевод отсутствует)</em></h2><a class="sl-anchor-link" href="#fsgcloading-screen-completion-перевод-отсутствует"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «FSGCLoading Screen Completion (перевод отсутствует)»</span></a></div>
+<p>Result paired with the request that produced it, including when a callback starts another request. <em>(перевод отсутствует)</em></p>
+<div class="sl-heading-wrapper level-h3"><h3 id="sgcloading-screen-6">SGC|Loading Screen</h3><a class="sl-anchor-link" href="#sgcloading-screen-6"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «SGC|Loading Screen»</span></a></div>
+<table>
+<thead>
+<tr>
+<th>Имя в редакторе</th>
+<th>Описание</th>
+<th>Значение по умолчанию</th>
+<th>Ограничения</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="FSGCLoadingScreenCompletion.Context"></a> Context <em>(перевод отсутствует)</em><br><code dir="auto">Context</code></td>
+<td>Identifies the request associated with this result, even if another screen has since been requested. <em>(перевод отсутствует)</em></td>
+<td>RequestId 0, Reason None, пустой MapKey</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="FSGCLoadingScreenCompletion.Outcome"></a> Outcome <em>(перевод отсутствует)</em><br><code dir="auto">Outcome</code></td>
+<td>Whether loading completed, was cancelled, exceeded Max Visible Secs, or failed to show a screen. <em>(перевод отсутствует)</em></td>
+<td>Cancelled <em>(перевод отсутствует)</em></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+</div><footer class="sl-flex" data-astro-cid-ddtxxk7k><div class="meta sl-flex" data-astro-cid-ddtxxk7k></div><div class="pagination-links print:hidden" dir="ltr" data-astro-cid-b5raizh3><a href="/ru/loading-screen/reference/startup-settings/" rel="prev" data-astro-cid-b5raizh3><svg data-astro-cid-b5raizh3="true" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;" data-astro-cid-hkc32dio><path d="M17 11H9.41l3.3-3.29a1.004 1.004 0 1 0-1.42-1.42l-5 5a1 1 0 0 0-.21.33 1 1 0 0 0 0 .76 1 1 0 0 0 .21.33l5 5a1.002 1.002 0 0 0 1.639-.325 1 1 0 0 0-.219-1.095L9.41 13H17a1 1 0 0 0 0-2Z"/></svg><span data-astro-cid-b5raizh3>Предыдущая<br data-astro-cid-b5raizh3><span class="link-title" data-astro-cid-b5raizh3>Настройки стартового экрана</span></span></a><a href="/ru/loading-screen/reference/elements/" rel="next" data-astro-cid-b5raizh3><svg data-astro-cid-b5raizh3="true" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;" data-astro-cid-hkc32dio><path d="M17.92 11.62a1.001 1.001 0 0 0-.21-.33l-5-5a1.003 1.003 0 1 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1.002 1.002 0 0 0 .325 1.639 1 1 0 0 0 1.095-.219l5-5a1 1 0 0 0 .21-.33 1 1 0 0 0 0-.76Z"/></svg><span data-astro-cid-b5raizh3>Следующая<br data-astro-cid-b5raizh3><span class="link-title" data-astro-cid-b5raizh3>Элементы UMG</span></span></a></div></footer></div></div></main></div></div></div></div></body></html>
